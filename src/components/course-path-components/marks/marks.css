@@ -1,0 +1,214 @@
+.marks {
+  min-width: 806px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 150px;
+}
+.marks_header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.marks_header_full {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.marks_upper_header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.marks_title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: right;
+  color: #232323;
+}
+.marks_note {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: right;
+  color: #708387;
+}
+.marks_container {
+  min-width: 474px;
+  min-height: 157px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+  align-self: center;
+}
+.marks_circle_container {
+  width: 106px;
+  height: 106px;
+  border-radius: 100%;
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+.marks_circul {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 100%;
+  aspect-ratio: 1 / 1;
+}
+.marks_details {
+  display: inline-block;
+}
+.marks_details_p {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  display: inline-block;
+}
+.marks_percentage_number {
+  font-size: 32px;
+}
+.marks_p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #708387;
+  display: inline-block;
+  margin-right: 12px;
+}
+.marks_success_percetage {
+  width: 152px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #7083871a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.marks_success_percentage_p {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-align: right;
+  color: #708387;
+}
+.marks_success_percentage_p_span {
+  font-weight: 700;
+  font-size: 16px;
+}
+.marks_tests_info_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 32px;
+}
+.marks_tests_info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+}
+.marks_test_info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 20px 16px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 0 #00000014;
+}
+.marks_test_title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: right;
+  color: #072127;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.marks_tests_statistics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.marks_tests_statistics_statistic {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: 66px;
+}
+.marks_tests_statistics_percentage {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 10px;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #708387;
+}
+.marks_tests_statistics_statistic_title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #708387;
+}
+.marks_tests_statistics_percentage_last {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 117%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #072127;
+}
+.result_container_text {
+  width: 91px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  color: #ffffff;
+}

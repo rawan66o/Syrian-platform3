@@ -1,0 +1,129 @@
+.add_course_step_four {
+  margin-top: 201px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+.lds-spinner {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.lds-spinner div {
+  transform-origin: 50px 50px;
+  animation: lds-spinner 1s linear infinite;
+}
+
+.lds-spinner div::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 45px;
+  width: 7.08px;
+  height: 21.34px;
+  border-radius: 31%;
+  background: #83d6f7;
+}
+
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -0.9375s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(22.5deg);
+  animation-delay: -0.875s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(45deg);
+  animation-delay: -0.8125s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(67.5deg);
+  animation-delay: -0.75s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(90deg);
+  animation-delay: -0.6875s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(112.5deg);
+  animation-delay: -0.625s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(135deg);
+  animation-delay: -0.5625s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(157.5deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(180deg);
+  animation-delay: -0.4375s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(202.5deg);
+  animation-delay: -0.375s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(225deg);
+  animation-delay: -0.3125s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(247.5deg);
+  animation-delay: -0.25s;
+}
+.lds-spinner div:nth-child(13) {
+  transform: rotate(270deg);
+  animation-delay: -0.1875s;
+}
+.lds-spinner div:nth-child(14) {
+  transform: rotate(292.5deg);
+  animation-delay: -0.125s;
+}
+.lds-spinner div:nth-child(15) {
+  transform: rotate(315deg);
+  animation-delay: -0.0625s;
+}
+.lds-spinner div:nth-child(16) {
+  transform: rotate(337.5deg);
+  animation-delay: 0s;
+}
+
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.add_course_step_four_feedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+}
+.add_course_step_four_feedback h1 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #072127;
+}
+.add_course_step_four_feedback p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #708387;
+}

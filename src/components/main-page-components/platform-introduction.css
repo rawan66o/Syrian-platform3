@@ -1,0 +1,254 @@
+.platform_introduction_container {
+  width: 100%;
+  padding: 72px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.platform_intoduction {
+  width: 556px;
+  height: 568.0184936523438px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 36px;
+}
+.platform_introduction_header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+}
+.platform_introduction_header_start {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+.platform_introduction_header_start_now {
+  width: 96px;
+  height: 40px;
+  border-radius: 40.01px;
+  background-color: #e5f6f9;
+  color: #6dcde5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -1px;
+  text-align: center;
+  align-content: center;
+}
+.platform_introduction_header_start h1 {
+  font-weight: 800;
+  font-size: 49px;
+  line-height: 114.99999999999999%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #0c1c2f;
+}
+.platform_introduction_header p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #70798b;
+}
+.platform_introduction_courses_viewmore_btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.platform_intoduction_courses_btn {
+  background-color: #6dcde5;
+  height: 52px;
+  width: 146px;
+  border-radius: 74.02px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25.01px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  align-content: center;
+}
+.platform_introduction_courses_viewmore_btn p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #708387;
+}
+.platform_intoduction_viewmore_btn {
+  width: 146.958984375px;
+  height: 52px;
+  border-radius: 150.04px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #0c1c2f;
+  background-color: #f9f9f9;
+  text-decoration: none;
+  text-align: center;
+  align-content: center;
+}
+.platform_introduction_statistics_container {
+  width: 407px;
+  height: 85px;
+  border-radius: 8px;
+  padding: 16.5px 31px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e5f6f9bf;
+}
+.platform_introduction_statistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  color: #6dcde5;
+}
+.platform_introduction_statistics h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 25.01px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+.platform_introduction_statistics p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25.01px;
+  letter-spacing: 0px;
+  text-align: right;
+  vertical-align: middle;
+}
+.platform_introduction_students_stats {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  margin-right: 15px;
+}
+.platform_introduction_students_imgs {
+  display: flex;
+  align-items: center;
+}
+.platform_introduction_students_imgs img {
+  margin-right: -15px;
+  width: 48.01px;
+  height: 48.01px;
+}
+.platform_introduction_plus_students {
+  width: 48.01231384277344px;
+  height: 48.01231384277344px;
+  background-color: #ffffff;
+  font-weight: 400;
+  font-size: 26.01px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #cccccc;
+  margin-right: -15px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+.platform_introduction_students_stats p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #70798b;
+}
+.platform_introduction_img {
+  width: 704.240234375px;
+  height: 609.001953125px;
+  position: relative;
+}
+.platform_introduction_img_circul {
+  width: 465.3664855957031px;
+  height: 467.8758239746094px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    #6dcde5b5 20%,
+    #6dcde578 40%,
+    #6dcde561 60%,
+    #6dcde50f 80%
+  );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.platform_introduction_image {
+  position: absolute;
+  bottom: 3%;
+  left: 55%;
+  transform: translateX(-50%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+.platform_introduction_vol_badge {
+  width: 132.50672586325265px;
+  height: 32.99999918743833px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #0c1c2f;
+  align-content: center;
+  text-align: center;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+.platform_introduction_courses_badge {
+  width: 132.50672586325265px;
+  height: 32.99999918743833px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #0c1c2f;
+  align-content: center;
+  text-align: center;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
+.platform_introduction_graduation_hat {
+  position: absolute;
+  bottom: 142.76px;
+  right: 0;
+}
+.platform_introduction_shape1 {
+  position: absolute;
+  top: 0;
+  right: 55px;
+}
+.platform_introduction_shape2 {
+  position: absolute;
+  top: 0;
+  left: 295px;
+}

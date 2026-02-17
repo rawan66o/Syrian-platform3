@@ -1,0 +1,168 @@
+.volunteer_projects_container {
+  width: 100%;
+  padding: 52px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 52px;
+  background-color: #f9f9f9;
+}
+.volunteer_projects_container_header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+}
+.volunteer_projects_container_header h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #6dcde5;
+}
+.volunteer_projects_container_header h1 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 0px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #072127;
+}
+.volunteer_projects_cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.volunteer_projects_card {
+  background-color: #fff;
+  width: 390px;
+  height: 479px;
+  padding-bottom: 30px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+.volunteer_projects_card_details {
+  padding: 0 20px;
+  width: 100%;
+  height: 193px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.volunteers_card_date_h1 {
+  width: 100%;
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.volunteers_card_date {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7px;
+}
+.volunteers_card_date p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #072127;
+}
+.volunteer_projects_card_details h1 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #072127;
+}
+.volunteers_num_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+}
+.volunteers_students_imgs {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.volunteers_students_imgs img {
+  margin-right: -15px;
+  width: 48.01px;
+  height: 48.01px;
+}
+.volunteers_plus_students {
+  width: 48.01231384277344px;
+  height: 48.01231384277344px;
+  background-color: #ffffff;
+  font-weight: 400;
+  font-size: 26.01px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #cccccc;
+  margin-right: -15px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  z-index: 10;
+}
+.volunteers_num_container p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #70798b;
+}
+.volunteer_view_project_btn {
+  width: 156px;
+  height: 28px;
+  border-radius: 4px;
+  border: none;
+  background-color: #fff;
+  border-bottom: 1px solid #072127;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #072127;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.view_all_volunteer_projects_btn {
+  width: 239px;
+  height: 56px;
+  border-radius: 100px;
+  background-color: #306b89;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}

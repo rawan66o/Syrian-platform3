@@ -1,0 +1,10 @@
+.test_results_page {
+  width: 100%;
+  margin: 0;
+  padding: 0 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 32px;
+}

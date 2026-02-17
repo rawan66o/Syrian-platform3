@@ -1,0 +1,219 @@
+/* .courses_page {
+} */
+.courses_page_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 100px;
+}
+.courses_sidebar_container {
+  width: 100%;
+  max-width: 356px;
+  min-height: 1424px;
+  padding: 40px 60px 32px 24px;
+  background-color: #f9f9f9;
+  margin-right: -100px;
+}
+.courses_sidebar {
+  width: 100%;
+}
+.courses_sidebar h1 {
+  width: 100%;
+  height: 50px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d9e4e5;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #000000;
+  margin-bottom: 24px;
+}
+.courses_categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  list-style: none;
+}
+.courses_categories_li {
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  cursor: pointer;
+  font-weight: 500;
+  color: #708387;
+  transition: all 0.2s ease-in-out;
+  align-content: center;
+}
+.courses_categories_li:hover {
+  background-color: #6dcde5;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 900;
+}
+.courses_chosen_category {
+  background-color: #6dcde5;
+  font-weight: 700;
+  color: #ffffff;
+}
+.courses_container {
+  width: 100%;
+  max-width: 952px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+}
+.courses_container_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.courses_container_header_title_and_order {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+.courses_container_header_title_and_order h1 {
+  height: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #072127;
+  margin-bottom: 0;
+}
+.courses_search_input_container {
+  position: relative;
+}
+.courses_searchicon {
+  position: absolute;
+  top: 50%;
+  right: 20.5px;
+  transform: translateY(-50%);
+}
+.courses_search_input {
+  width: 434px;
+  height: 52px;
+  border-radius: 41px;
+  border: 1px solid #d9e4e5;
+  padding-right: 54.5px;
+  padding-left: 100px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #072127;
+  outline: none;
+}
+.courses_search_input::placeholder {
+  color: #708387;
+}
+.courses_search_button {
+  position: absolute;
+  top: 50%;
+  left: 9.5px;
+  transform: translateY(-50%);
+  width: 76px;
+  height: 40px;
+  border-radius: 48px;
+  border: 1px solid #6dcde5;
+  background-color: #6dcde5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+.courses_cards {
+  max-width: 952px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 26.87px;
+  row-gap: 35.07px;
+}
+.courses_pagination_container {
+  margin-top: 8px;
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.courses_pagination_btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #d9e4e5;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.courses_pagination_btn:hover {
+  background-color: #708387;
+}
+.courses_pages_pagination_nums {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.courses_pages_pagination_nums_p {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #708387;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  align-content: center;
+}
+.courses_pages_pagination_nums_p:hover {
+  width: 36px;
+  height: 36px;
+  background-color: #6dcde5;
+  font-weight: 900;
+  font-size: 16px;
+  color: #ffffff;
+}
+.courses_page_chosen {
+  background-color: #6dcde5;
+  font-weight: 700;
+  font-size: 13px;
+  color: #ffffff;
+}
+.courses_page_stepper_style {
+  background-color: none;
+  justify-self: center;
+  align-self: center;
+}
+.courses_page_stepper_style:hover {
+  background-color: none;
+  background: none;
+}

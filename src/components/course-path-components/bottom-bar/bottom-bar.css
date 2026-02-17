@@ -1,0 +1,45 @@
+.bottom_bar {
+  position: absolute;
+  bottom: 0;
+  width: 99.5vw;
+  right: 50%;
+  margin-right: -50vw;
+  box-shadow: 0 -2px 37.4px 0 #0000001a;
+  height: 89px;
+  padding: 16.5px 0 16.5px 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+}
+.next {
+  width: 396px;
+  height: 56px;
+  border-radius: 100px;
+  background-color: #6dcde5;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -2%;
+  text-align: center;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.previous {
+  width: 146px;
+  height: 56px;
+  border-radius: 100px;
+  color: #072127;
+  border: 1px solid #d9e4e5;
+  outline: none;
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -2%;
+  text-align: center;
+  cursor: pointer;
+}

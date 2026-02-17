@@ -1,0 +1,78 @@
+.add_course_level_container_full {
+  width: 700px;
+  border-radius: 8px;
+  border-right: 6px solid #6dcde5;
+  box-shadow: 0 0 11px 0 #0000001a;
+  background-color: #fefeff;
+  padding: 20px 20px 33px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  animation: AddCourseLevelEffect 300ms ease-in-out;
+}
+@keyframes AddCourseLevelEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 0.75;
+    transform: translateY(-10px);
+  }
+  75% {
+    opacity: 0.95;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.add_course_level_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+.add_course_level_container h1 {
+  width: 100%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #072127;
+}
+.add_course_add_level_lesson_test_buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.add_course_add_lesson_button {
+  width: 140px;
+  height: 44px;
+  border-radius: 6px;
+  background-color: #6dcde5;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.add_course_add_test_button {
+  width: 140px;
+  height: 44px;
+  border-radius: 6px;
+  background-color: #6dcde51a;
+  border: 1px solid #6dcde5;
+  cursor: pointer;
+}

@@ -1,0 +1,132 @@
+.progress-bar {
+  width: 402px;
+  border-radius: 8px;
+  background-color: #fefeff;
+  padding: 24px 16px 32px 16px;
+  box-shadow: 0 0 11px 0 #0000001a;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-bottom: 300px;
+}
+.header_container {
+  width: 100%;
+}
+.header {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.header h1 {
+  width: 100%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #232323;
+  margin-bottom: 20px;
+}
+.statistics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 28px;
+}
+.statistics_info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.progress_percentage {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #072127;
+}
+.progress_percentage span {
+  font-weight: 700;
+}
+.progress_line_container {
+  width: 100%;
+  position: relative;
+}
+.progress_line_container::before {
+  content: "";
+  height: 9px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 168px;
+  background-color: #ebebeb80;
+  z-index: 0;
+}
+.percentage_line {
+  height: 9px;
+  border-radius: 168px;
+  background-color: #6dcde5;
+  width: 1%;
+  z-index: 1;
+  position: relative;
+}
+.finished_lessons {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #708387;
+}
+.show_marks_button_container {
+  width: 100%;
+}
+.show_marks_btn {
+  width: 100%;
+  height: 48px;
+  background-color: #6dcde51a;
+  border: 1px solid #6dcde580;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -2%;
+  text-align: center;
+  color: #6dcde5;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.rating_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.rating_p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #232323;
+}
+.react-simple-star-rating {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.react-simple-star-rating svg {
+  vertical-align: middle;
+}
+.levels {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+}

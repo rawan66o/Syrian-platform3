@@ -1,0 +1,110 @@
+.course_card {
+  width: 299.4193420410156px;
+  height: 335.50323486328125px;
+  border: 0.77px solid #d9e4e5;
+  background-color: #fff;
+  border-radius: 18.43px;
+  position: relative;
+}
+.course_card_hours {
+  position: absolute;
+  top: 9.21px;
+  right: 9.21px;
+  width: 89.05806732177734px;
+  height: 30.70967674255371px;
+  border-radius: 42.23px;
+  border: 0.77px solid #d9e4e5;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4.61px;
+}
+.course_card_hours p {
+  font-weight: 500;
+  font-size: 11.52px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #0c1c2f;
+}
+.course_card_img {
+  border-top-left-radius: 18.43px;
+  border-top-right-radius: 18.43px;
+  width: 100%;
+}
+.course_card_details {
+  width: 100%;
+  padding: 23.03px 15.35px 16.89px 15.35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20.73px;
+}
+.course_card_details h1 {
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #072127;
+}
+.course_card_students_and_rating {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course_card_students_and_rating p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #306b89;
+}
+.course_card_rating_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3.07px;
+}
+.course_card_rating_container p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #232323;
+}
+.course_card_view_course_btn {
+  width: 100%;
+  height: 39.92px;
+  border: 0.77px solid #d9e4e5;
+  border-radius: 115.19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7.68px;
+}
+.course_card_view_course_btn {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #072127;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.course_card_view_course_btn:hover {
+  background-color: #306b89;
+  color: white;
+}

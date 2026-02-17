@@ -1,0 +1,207 @@
+.why_us_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 52px;
+  background-color: #fff;
+  padding: 0 100px;
+}
+.why_us_img_container {
+  width: 577px;
+  height: 757px;
+  border-radius: 40px;
+  background: linear-gradient(to bottom, #6dcde5 0%, #c1e7f0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.why_us_note_container {
+  width: 196px;
+  height: 102px;
+  padding: 11px 15px;
+  border-radius: 16px;
+  border-bottom-right-radius: -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 41px;
+  left: 70px;
+  z-index: 10;
+  background-color: #ffffff;
+}
+.why_us_note_container::after {
+  content: "";
+  position: absolute;
+  bottom: -26px;
+  transform: rotateZ(70deg);
+  right: 0px;
+  width: 0;
+  height: 0;
+  border-radius: 5%;
+  border: 35px solid transparent;
+  border-top-color: white;
+  z-index: -1;
+}
+.why_us_question_mark_container {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #70798b1a;
+  text-align: center;
+  align-content: center;
+  color: #000000;
+  font-weight: bold;
+  position: relative;
+}
+.why_us_what_are_you_waiting_for {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #000000;
+}
+.why_us_question_mark_container p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #000000;
+}
+.why_us_note_container h1 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #6dcde5;
+}
+.why_us_circul_outer {
+  width: 486px;
+  height: 486px;
+  border-radius: 50%;
+  border: 60px solid #ffffff57;
+  position: relative;
+}
+.why_us_circul {
+  width: 246px;
+  height: 246px;
+  border-radius: 50%;
+  border: 100px solid #ffffff57;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.why_us_img_container img {
+  position: absolute;
+  bottom: 0;
+  left: 99px;
+}
+.why_us_description_container {
+  width: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 22px;
+}
+.why_us_description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.why_us_header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+.why_us_why_us {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #6dcde5;
+}
+.why_us_header h1 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #072127;
+}
+.why_us_header_p_p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #70798b;
+}
+.why_us_platform_offers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  row-gap: 32px;
+}
+.why_us_offer {
+  width: 294px;
+  height: 235px;
+  border-radius: 20px;
+  box-shadow: 0 0 4px 0 #0000002e;
+  padding: 14.87px 22px 27.76px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.why_us_offer_header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 142.75px;
+}
+.why_us_icon_container {
+  width: 62px;
+  height: 62px;
+  border-radius: 51px;
+  background-color: #70798b1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why_us_offer_header h1 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 0px;
+  letter-spacing: 0px;
+  text-align: right;
+  vertical-align: middle;
+  color: #0c1c2f;
+}
+.why_us_offer_header p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #70798b;
+}

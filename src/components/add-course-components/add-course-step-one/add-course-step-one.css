@@ -1,0 +1,14 @@
+.add_course_step_one_container {
+  max-width: 700px;
+  width: 100%;
+  border-radius: 8px;
+  border-right: 6px solid #6dcde5;
+  background-color: #fefeff;
+  box-shadow: 0 0 11px 0 #0000001a;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px 20px 20px 24px;
+}

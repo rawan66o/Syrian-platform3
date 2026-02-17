@@ -1,0 +1,60 @@
+.bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.pageClass {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #708387;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  align-content: center;
+  transition: all 0.3s ease-in-out;
+  animation: showPage 0.3s ease-in-out;
+}
+@keyframes showPage {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.pageClass:hover {
+  width: 36px;
+  height: 36px;
+  background-color: #6dcde5;
+  font-weight: 900;
+  font-size: 16px;
+  color: #ffffff;
+}
+.currentPageClass {
+  background-color: #6dcde5;
+  font-weight: 700;
+  font-size: 13px;
+  color: #ffffff;
+}
+.dots {
+  background-color: none;
+  justify-self: center;
+  align-self: center;
+}
+.dots:hover {
+  background-color: none;
+  background: none;
+}

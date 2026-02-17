@@ -1,0 +1,114 @@
+.course_finished {
+  width: 100%;
+  margin: 0;
+  padding: 0 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 32px;
+  margin-bottom: 150px;
+}
+.course_finished_body {
+  min-width: 806px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32px;
+  align-items: center;
+}
+.finished_outer_outer_circul {
+  width: 218.2894744873047px;
+  height: 218.2894744873047px;
+  background-color: #34c7590d;
+  position: relative;
+  border-radius: 109.14px;
+}
+.finished_outer-circul {
+  width: 150.377197265625px;
+  height: 150.377197265625px;
+  background-color: #34c75926;
+  border-radius: 91.24px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border: 33.95px solid #34c7590d;
+}
+.finished_circul {
+  width: 77.5005111694336px;
+  height: 77.5005111694336px;
+  border-radius: 52.36px;
+  background-color: #34c759;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.finished_p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+.finished_p_header {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #072127;
+}
+.finished_p_body {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  color: #708387;
+}
+.certificate_preview_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.certificate_download_button {
+  width: 190px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: #6dcde5;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.certificate_preview_button {
+  width: 190px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: #f2f2f280;
+  color: #072127;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: right;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}

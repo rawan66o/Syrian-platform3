@@ -1,0 +1,13 @@
+.dividing_element_full_screen {
+  max-width: 99.5vw;
+  width: 99.5vw;
+  right: 50%;
+  left: 50%;
+  margin-right: -50vw;
+  margin-left: -50vw;
+  border-top: 1px solid #d9e4e5;
+  position: absolute;
+  top: -32px;
+  left: 0;
+  /* transform: translateX(-50%); */
+}

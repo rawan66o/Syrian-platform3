@@ -1,0 +1,254 @@
+.auth_container {
+  opacity: 1;
+  max-width: 538px;
+  margin: 36px auto 0 auto;
+  padding-bottom: 200px;
+}
+.header {
+  margin: 0 auto 24px auto;
+  width: 93.7%;
+}
+h1 {
+  color: #072127;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  width: 100%;
+}
+.header_p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #708387;
+  line-height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.link {
+  text-decoration: none;
+  color: #6dcde5;
+}
+.auth_body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+.o_auth_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.o_auth_container button {
+  flex: 1;
+  height: 56px;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid #d9dbe5;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.google_icon {
+  width: 24px;
+}
+.apple_icon {
+  width: 20px;
+}
+.o_auth_p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #0a1826;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+.or_separater {
+  width: 100%;
+  color: #708387;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.form_container {
+  width: 100%;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.form_inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.input_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+.input_container_with_forgot {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.p_wrapper {
+  width: 100%;
+}
+.forgot_p {
+  color: #0a1826;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -2%;
+  text-align: right;
+  text-decoration: none;
+}
+.input_label {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+.label_with_validation_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+.validation_p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #708387;
+}
+.form_input {
+  width: 100%;
+  height: 56px;
+  padding: 0 20px;
+  outline: none;
+  border: 1px solid #d9e4e5;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.checkbox_container {
+  width: 100%;
+  padding: 4px 0;
+  display: flex;
+  /* justify-content: right; */
+  align-items: center;
+  gap: 8px;
+}
+.checkbox_wrapper {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox {
+  width: 22px;
+  height: 22px;
+  background-color: #6dcde5;
+}
+.checkbox_label {
+  color: #0a1826;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -2%;
+  text-align: right;
+}
+.button_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.submit_button {
+  width: 100%;
+  height: 56px;
+  opacity: 1;
+  flex: 13;
+  border-radius: 100px;
+  background-color: #6dcde5;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -2%;
+  text-align: center;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.cancel_button {
+  height: 56px;
+  opacity: 1;
+  flex: 4;
+  width: 122px;
+  border-radius: 100px;
+  border: 1px solid #d9e4e5;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -2%;
+  text-align: center;
+  color: #072127;
+  outline: none;
+  cursor: pointer;
+}
+.input_with_icon {
+  width: 100%;
+  position: relative;
+}
+.show_and_hide_icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(50%, -50%);
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .auth_container {
+    padding: 0 20px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .o_auth_container {
+    flex-direction: column;
+    height: 124px;
+  }
+}

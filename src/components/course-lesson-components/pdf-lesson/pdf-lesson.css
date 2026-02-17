@@ -1,0 +1,7 @@
+.pdf_lesson {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.pdf_file {
+  border: none;
+}

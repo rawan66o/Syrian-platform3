@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+.add_course_add_lesson_container {
+  width: 100%;
+  padding: 24px 12px;
+  background-color: #f9f9f980;
+  border-radius: 8px;
+  animation: AddCourseLessonEffect 300ms ease-in-out;
+}
+@keyframes AddCourseLessonEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 0.75;
+    transform: translateY(-10px);
+  }
+  75% {
+    opacity: 0.95;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.add_course_add_lesson_header_and_title {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.add_course_add_lesson_header_and_title h1 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #072127;
+  margin-bottom: 16px;
+}
+.add_course_add_lesson_type_and_lesson_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+}
+.add_course_add_lesson_choose_type_and_lesson_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.add_course_add_lesson_choose_type_and_lesson_info p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #072127;
+}
+.add_course_add_lesson_choose_type_options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+}
+.add_course_add_lesson_choose_type_option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.add_course_add_lesson_choose_type_option p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #071722;
+  font-family: "Cairo", sans-serif;
+}
+.add_course_add_lesson_option {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #708387;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.add_course_add_lesson_chosen {
+  border: 2px solid #6dcde5;
+  position: relative;
+  animation: AddLessonOptionOpacityEffect 300ms ease-in-out;
+}
+.add_course_add_lesson_chosen::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: #6dcde5;
+  border-radius: 50%;
+  animation: AddLessonOptionOpacityEffect 300ms ease-in-out;
+}
+@keyframes AddLessonOptionOpacityEffect {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.add_course_add_lesson_upload_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.add_lesson_date_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+}
+.add_course_date_picker_label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #000000;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+.react-datepicker__input-container input {
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #70838766;
+  font-size: 16px;
+  color: #072127;
+  cursor: pointer;
+}

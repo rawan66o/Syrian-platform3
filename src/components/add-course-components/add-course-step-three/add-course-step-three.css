@@ -1,0 +1,99 @@
+.add_course_tests_preview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 32px;
+  background-color: #f9f9f980;
+  padding: 24px 10px;
+}
+
+.add_course_tests_preview h1 {
+  width: 100%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #072127;
+}
+.add_course_tests_preview_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 32px;
+}
+.add_course_test_preview_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 3px 0 #00000014;
+}
+.add_course_test_preview_name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.add_course_test_preview_name p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #072127;
+}
+.add_course_test_preview_questions_num {
+  width: 106px;
+  height: 66px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.add_course_test_preview_questions_number {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 10px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #708387;
+}
+.add_course_test_preview_questions_number_title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #708387;
+}
+.add_course_test_preview_edit_test_container {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.add_course_test_preview_edit_test_container p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 12px;
+  letter-spacing: 0px;
+  color: #072127;
+}
