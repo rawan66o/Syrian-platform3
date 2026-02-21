@@ -1,0 +1,376 @@
+/* حاوية التطبيق الرئيسية */
+.app-a {
+  direction: rtl;
+  display: flex;
+  flex-direction: column; /* مهم: عمودي */
+  justify-content: flex-start; /* بداية الصفحة */
+  align-items: center;
+  padding-top: 40px; /* قللت المسافة */
+  background: #ffff;
+  min-height: 100vh; /* بدل height */
+  text-align: center;
+}
+
+/* حاوية الطلب */
+.request {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.request h6{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #232323;
+}
+
+/* النموذج */
+.form-request {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  padding: 20px;
+  gap: 24px;
+  border-radius: 8px;
+  border-right: 6px solid #6DCDE5;
+  background: #FEFEFF;
+  box-shadow: 0px 0px 11px 0px #0000001A;
+}
+
+.form-request input,
+.form-request textarea {
+  width: 660px;
+  height: 56px;
+  opacity: 1;
+  border-radius: 8px;
+  background: #FFFFFF;
+  border: 1px solid #70838766;
+  padding: 12px 12px;
+  outline: none;
+}
+
+.input-texthelp {
+  width: 660px;
+  height: 13px;
+  opacity: 1;
+  color: #708387;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+}
+
+.form-request textarea{
+  height: 126px;
+  opacity: 1;
+  resize: none;
+}
+
+.form-request textarea::placeholder,
+.form-request input::placeholder{
+  display: flex;
+  align-items: flex-start;
+  width: 228.59px;
+  height: 17px;
+  color: #708387;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: right;
+}
+
+.form-request input:hover,
+.form-request input:focus,
+.form-request input:active,
+.form-request textarea:hover,
+.form-request textarea:focus,
+.form-request textarea:active {
+  border: 1px solid #70838780; /* الحفاظ على الخط السفلي فقط */
+  outline: none;
+}
+
+.form-request label{
+  width: 100%;
+  height: 19px;
+  opacity: 1;
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+}
+
+.date-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.date-wrapper p{
+  position: absolute;
+  left: 530px;
+  top: 40%;
+  color: #072127;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+/* حقل رقم الهاتف مع الزر */
+.phone-container {
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.form-request button{
+  height: 56px;
+  opacity: 1;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -2%;
+  text-align: center;
+}
+
+/* أزرار التنقل */
+.button-request {
+  display: flex;
+  position: relative; 
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 89px;
+  padding: 20px 100px;
+  gap: 20px;
+  /* padding-top: 40px; */
+  background: #FFFFFF;
+  box-shadow: 0px -2px 37.4px 0px #0000001A;
+}
+
+.button-request button{
+  height: 56px;
+  left: 100px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -2%;
+  text-align: center;
+}
+
+.date-input-container {
+  position: relative;
+  width: 100%;
+  height: 56px;
+  border: 0px solid #70838766;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.date-real-input {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* border: 1px solid #D9E4E5; */
+  height: 100%;
+  gap: 10px;
+  border: 0px;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.date-display {
+  position: absolute;
+  border: 1px solid #D9E4E5;
+  border-radius: 8px;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.date-text {
+  flex: 1;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.date-arrow img {
+  width: 12px;
+  height: 11px;
+  transform: rotate(90deg);
+}
+ 
+/* تحسين حاوية رفع الصور */
+.input-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 107px;
+  border-radius: 10px;
+  background: #6DCDE50D;
+  border: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.input-image:hover {
+  background: #6DCDE51A;
+  border-color: #6DCDE5;
+}
+
+.input-image-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  background: #6DCDE51A;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.input-image-button:hover {
+  transform: scale(1.05);
+  background: #6DCDE533;
+}
+
+.input-image image{
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* معاينة الصورة داخل الزر */
+.input-image-button img[src*="base64"],
+.input-image-button img[src*="blob"] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* تصغير نص المساعدة عند وجود صورة */
+.input-image.has-image .input-texthelp {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* معرض الصور */
+.gallery-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #D9E4E5;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-close{
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.delete-image-btn {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+/* تحسين CSS للأجهزة الصغيرة */
+@media (max-width: 768px) {
+  .request {
+    width: 95%;
+    padding: 0 10px;
+  }
+  
+  .form-request {
+    padding: 15px;
+  }
+  
+  .button-request {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 10px;
+  }
+  
+  .button-request button {
+    width: 100% !important;
+  }
+}
+
+/* تحسين responsiveness */
+@media (max-width: 768px) {
+  .gallery-preview {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .input-image {
+    height: 120px;
+  }
+}

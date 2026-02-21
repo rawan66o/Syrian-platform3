@@ -1,0 +1,341 @@
+/* Forum.module.css */
+
+.forumPage {
+  direction: rtl;
+  font-family: 'Tajawal', sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+/* Container الرئيسي */
+.forumContainer {
+  display: flex;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Desktop */
+.forumContainer.desktop {
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 150px;
+}
+
+/* Tablet */
+.forumContainer.tablet {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 30px 60px;
+}
+
+/* Mobile */
+.forumContainer.mobile {
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 16px;
+}
+
+/* الشريط الجانبي */
+.forumSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.forumContainer.desktop .forumSidebar {
+  width: 356px;
+  flex-shrink: 0;
+}
+
+.forumContainer.tablet .forumSidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.forumContainer.mobile .forumSidebar {
+  width: 100%;
+}
+
+/* المحتوى الرئيسي */
+.forumContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.forumContainer.mobile .forumContent,
+.forumContainer.tablet .forumContent {
+  width: 100%;
+}
+
+/* شبكة المشاريع */
+.projectsGrid {
+  display: grid;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.forumContainer.mobile .projectsGrid {
+  grid-template-columns: 1fr !important;
+  gap: 24px;
+}
+
+/* عنصر المشروع */
+.projectItem {
+  width: 100%;
+  break-inside: avoid;
+}
+
+/* حالة لا توجد مشاريع */
+.noProjects {
+  text-align: center;
+  padding: 60px 20px;
+  color: #708387;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Pagination */
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.forumContainer.desktop .paginationContainer {
+  gap: 40px;
+}
+
+.forumContainer.tablet .paginationContainer {
+  gap: 30px;
+}
+
+.forumContainer.mobile .paginationContainer {
+  gap: 20px;
+}
+
+/* أزرار Pagination */
+.paginationBtn {
+  border: 1px solid #D9E4E5;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+  outline: none;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.forumContainer.desktop .paginationBtn {
+  width: 48px;
+  height: 48px;
+}
+
+.forumContainer.tablet .paginationBtn {
+  width: 44px;
+  height: 44px;
+}
+
+.forumContainer.mobile .paginationBtn {
+  width: 40px;
+  height: 40px;
+}
+
+.paginationBtn:not(.disabled):hover {
+  background-color: #F0F9FF;
+}
+
+.paginationBtn.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.prevBtn .arrow {
+  color: #6DCDE5;
+}
+
+.nextBtn .arrow {
+  color: #6DCDE5;
+}
+
+.paginationBtn.disabled .arrow {
+  color: #CCCCCC;
+}
+
+.arrow {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.forumContainer.mobile .arrow {
+  font-size: 20px;
+}
+
+/* أرقام الصفحات */
+.stepNumbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.forumContainer.desktop .stepNumbers {
+  gap: 40px;
+}
+
+.forumContainer.tablet .stepNumbers {
+  gap: 30px;
+}
+
+.forumContainer.mobile .stepNumbers {
+  gap: 15px;
+}
+
+/* رقم الصفحة */
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Tajawal', sans-serif;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  user-select: none;
+}
+
+.forumContainer.desktop .stepNumber {
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+}
+
+.forumContainer.tablet .stepNumber {
+  width: 34px;
+  height: 34px;
+  font-size: 13px;
+}
+
+.forumContainer.mobile .stepNumber {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+}
+
+.stepNumber:not(.active) {
+  background-color: transparent;
+  color: #708387;
+}
+
+.stepNumber:not(.active):hover {
+  background-color: #F5F5F5;
+}
+
+.stepNumber.active {
+  background-color: #6DCDE5;
+  color: #FFFFFF;
+}
+
+/* النقاط بين أرقام الصفحات */
+.stepDots {
+  display: flex;
+  align-items: center;
+  color: #708387;
+  font-size: 12px;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+.forumContainer.mobile .stepDots {
+  margin: 0 2px;
+}
+
+/* Media Queries داخل CSS Module */
+@media (max-width: 480px) {
+  .forumContainer.mobile {
+    padding: 16px 12px;
+  }
+  
+  .forumSidebar {
+    gap: 20px;
+  }
+  
+  .noProjects {
+    font-size: 16px;
+    padding: 40px 20px;
+  }
+  
+  .paginationContainer {
+    gap: 15px;
+  }
+  
+  .stepNumbers {
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+  .forumContainer.desktop {
+    padding: 40px 80px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .forumContainer.desktop {
+    padding: 40px 150px;
+  }
+}
+
+/* تحسينات للشاشات الكبيرة جداً */
+@media (min-width: 1600px) {
+  .forumContainer.desktop {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+/* Media Query للأجهزة اللوحية المتوسطة */
+@media (max-width: 900px) and (min-width: 768px) {
+  .forumContainer.tablet {
+    flex-direction: column;
+  }
+  
+  .forumContainer.tablet .forumSidebar {
+    width: 100%;
+  }
+  
+  .forumContainer.tablet .projectsGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Media Query للشاشات الصغيرة جداً */
+@media (max-width: 360px) {
+  .forumContainer.mobile {
+    padding: 12px 10px;
+  }
+  
+  .paginationBtn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .stepNumber {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+  
+  .arrow {
+    font-size: 18px;
+  }
+}

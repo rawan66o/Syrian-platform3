@@ -1,0 +1,126 @@
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  direction: rtl;
+  width: 356px;
+  height: auto;
+  border-radius: 20px;
+  gap: 24px;
+  box-shadow: 0px 0px 5px 0px #00000026;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-bottom: 32px;
+  padding-left: 24px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.categories-header {
+  width: 90%;
+  border-bottom: 1px solid #D9E4E5;
+  padding-bottom: 16px;
+}
+
+.categories-header h6{
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #000;
+}
+
+.categories-title {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #072127 !important;
+  margin: 0 !important;
+}
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 90%;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category-item:hover {
+  transform: translateX(-4px);
+}
+
+.category-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: row;
+}
+
+.category-icon {
+  border: 1px solid #747474;
+  border-radius: 54px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover .category-icon {
+  transform: scale(1.1);
+}
+
+.icon-image {
+  width: 12px;
+  height: 10px;
+  object-fit: contain;
+}
+
+.category-name {
+  font-size: 16px !important;
+  color: #072127 !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+}
+
+.category-count {
+  font-size: 14px !important;
+  color: #747474 !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 12px;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 480px) {
+  .categories-container {
+    width: 100%;
+    max-width: 356px;
+    margin: 0 auto;
+  }
+  
+  .categories-list {
+    gap: 12px;
+  }
+  
+  .category-item {
+    padding: 6px 0;
+  }
+}

@@ -1,4 +1,5 @@
 .volunteer-card-project {
+  direction: rtl;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -8,13 +9,10 @@
   border-radius: 24px;
   padding-bottom: 30px;
   background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
 .volunteer-card-project:hover {
-  /* transform: translateY(-4px); */
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
 }
 
 .image-volunteer-card-project {
@@ -28,7 +26,7 @@
   display: flex;
   flex-direction: column;
   /* align-items: start; */
-  gap: 32px;
+  gap: 27px;
   padding: 0px 20px;
 }
 
@@ -96,11 +94,11 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 10px;
-  text-align: center;
+  gap: 27px;
+  text-align: right;
 }
 
-.project-title {
+.volunteer-card-content h1 {
   font-size: 22px !important;
   line-height: 100% !important;
   letter-spacing: 0% !important;
@@ -110,12 +108,12 @@
   text-align: right;
 }
 
-.project-detail {
+.volunteer-card-content p {
   font-size: 16px !important;
   font-weight: 500 !important;
   line-height: 160% !important;
   letter-spacing: 0% !important;
-  color: #666 !important;
+  color: #70798B !important;
   margin: 0 !important;
   text-align: right;
 }
@@ -124,7 +122,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 10px;
+  gap: 15px;
 }
 
 .volunteers-section {
@@ -163,6 +161,37 @@
   border-bottom: 2px solid #072127 !important;
 }
 
+.teach-o{
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.teach-o img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.btn-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  color: #000 !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  height: 52px !important;
+  background: #ffff !important;
+  border-radius: 100px !important;
+  border: 1px solid #D9E4E5 !important;
+}
+
 /* تحسينات للشاشات الصغيرة */
 @media (max-width: 480px) {
   .volunteer-card-project {
@@ -189,8 +218,6 @@
   width: 356;
   height: auto;
   border-radius: 20px;
-  /* angle: 0 deg; */
-  opacity: 1;
   gap: 24px;
   padding-top: 24px;
   padding-right: 24px;
@@ -202,9 +229,7 @@
 
 .Latest-project {
   width: 356;
-  height: 478.00006103515625;
-  /* angle: 0 deg; */
-  opacity: 1;
+  height: 478.00006103515625px;
   gap: 24px;
   padding-top: 24px;
   padding-right: 24px;

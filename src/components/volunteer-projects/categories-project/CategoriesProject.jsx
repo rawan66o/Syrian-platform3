@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import '../../styles/CategoriesProject.css'; // سننشئ ملف CSS منفصل
+import './CategoriesProject.css'; 
 
 function CategoriesProject() {
   const categories = [
@@ -13,9 +13,9 @@ function CategoriesProject() {
   return (
     <div className="categories-container">
       <div className="categories-header">
-        <Typography variant="h6" className="categories-title">
+        <h6 variant="h6" className="categories-title">
           التصنيفات
-        </Typography>
+        </h6>
       </div>
       
       <div className="categories-list">
@@ -32,13 +32,13 @@ function CategoriesProject() {
                   className="icon-image"
                 />
               </div>
-              <Typography className="category-name">
+              <p className="category-name">
                 {category.name}
-              </Typography>
+              </p>
             </div>
-            <Typography className="category-count">
+            <p className="category-count">
               {category.count}
-            </Typography>
+            </p>
           </div>
         ))}
       </div>

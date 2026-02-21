@@ -1,0 +1,401 @@
+/* VolunteerProjects.module.css */
+
+.volunteerProjects {
+  direction: rtl;
+  font-family: 'Tajawal', sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+/* Container الرئيسي */
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Desktop */
+.container.desktop {
+  padding: 40px 150px;
+}
+
+/* Tablet */
+.container.tablet {
+  padding: 30px 60px;
+}
+
+/* Mobile */
+.container.mobile {
+  padding: 20px 16px;
+}
+
+/* Content Wrapper */
+.contentWrapper {
+  display: flex;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.container.desktop .contentWrapper {
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.container.tablet .contentWrapper {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.container.mobile .contentWrapper {
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* الشريط الجانبي */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.container.desktop .sidebar {
+  width: 356px;
+  flex-shrink: 0;
+}
+
+.container.tablet .sidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.container.mobile .sidebar {
+  width: 100%;
+}
+
+/* المحتوى الرئيسي */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.container.mobile .mainContent,
+.container.tablet .mainContent {
+  width: 100%;
+}
+
+/* شبكة المشاريع */
+.projectsGrid {
+  display: grid;
+  gap: 32px;
+}
+
+.container.mobile .projectsGrid {
+  gap: 24px;
+}
+
+/* عنصر المشروع */
+.projectItem {
+  width: 100%;
+  break-inside: avoid;
+}
+
+/* حالة لا توجد مشاريع */
+.noProjects {
+  text-align: center;
+  padding: 60px 20px;
+  color: #708387;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.container.mobile .noProjects {
+  font-size: 16px;
+  padding: 40px 20px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.container.desktop .pagination {
+  gap: 40px;
+}
+
+.container.tablet .pagination {
+  gap: 30px;
+}
+
+.container.mobile .pagination {
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* أزرار Pagination */
+.paginationBtn {
+  border: 1px solid #D9E4E5;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+  outline: none;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.container.desktop .paginationBtn {
+  width: 48px;
+  height: 48px;
+}
+
+.container.tablet .paginationBtn {
+  width: 44px;
+  height: 44px;
+}
+
+.container.mobile .paginationBtn {
+  width: 40px;
+  height: 40px;
+}
+
+.paginationBtn:not(.disabled):hover {
+  background-color: #F0F9FF;
+}
+
+.paginationBtn.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.prevBtn .arrowIcon {
+  color: #6DCDE5;
+}
+
+.nextBtn .arrowIcon {
+  color: #6DCDE5;
+}
+
+.paginationBtn.disabled .arrowIcon {
+  color: #CCCCCC;
+}
+
+.arrowIcon {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.container.mobile .arrowIcon {
+  font-size: 20px;
+}
+
+/* Step Numbers Container */
+.stepNumbersContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container.desktop .stepNumbersContainer {
+  gap: 40px;
+}
+
+.container.tablet .stepNumbersContainer {
+  gap: 30px;
+}
+
+.container.mobile .stepNumbersContainer {
+  gap: 20px;
+}
+
+/* رقم الصفحة */
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Tajawal', sans-serif;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  user-select: none;
+}
+
+.container.desktop .stepNumber {
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+}
+
+.container.tablet .stepNumber {
+  width: 34px;
+  height: 34px;
+  font-size: 13px;
+}
+
+.container.mobile .stepNumber {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+}
+
+.stepNumber:not(.active) {
+  background-color: transparent;
+  color: #708387;
+}
+
+.stepNumber:not(.active):hover {
+  background-color: #F5F5F5;
+}
+
+.stepNumber.active {
+  background-color: #6DCDE5;
+  color: #FFFFFF;
+}
+
+/* النقاط بين أرقام الصفحات */
+.stepDots {
+  display: flex;
+  align-items: center;
+  color: #708387;
+  font-size: 12px;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+.container.mobile .stepDots {
+  margin: 0 2px;
+}
+
+/* Media Queries داخل CSS Module */
+@media (max-width: 480px) {
+  .container.mobile {
+    padding: 16px 12px;
+  }
+  
+  .sidebar {
+    gap: 20px;
+  }
+  
+  .projectsGrid {
+    gap: 20px;
+  }
+  
+  .pagination {
+    gap: 15px;
+  }
+  
+  .stepNumbersContainer {
+    gap: 10px;
+  }
+  
+  .paginationBtn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .stepNumber {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+  
+  .arrowIcon {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+  .container.desktop {
+    padding: 40px 80px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container.desktop {
+    padding: 40px 150px;
+  }
+}
+
+/* تحسينات للشاشات الكبيرة جداً */
+@media (min-width: 1600px) {
+  .container.desktop {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+/* Media Query للأجهزة اللوحية المتوسطة */
+@media (max-width: 900px) and (min-width: 768px) {
+  .container.tablet {
+    flex-direction: column;
+  }
+  
+  .container.tablet .sidebar {
+    width: 100%;
+  }
+}
+
+/* Media Query للشاشات بين 600px و 768px */
+@media (max-width: 768px) and (min-width: 600px) {
+  .container.tablet {
+    padding: 25px 40px;
+  }
+  
+  .contentWrapper {
+    gap: 25px;
+  }
+  
+  .sidebar {
+    width: 280px;
+  }
+}
+
+/* Media Query للشاشات الصغيرة جداً */
+@media (max-width: 360px) {
+  .container.mobile {
+    padding: 12px 10px;
+  }
+  
+  .paginationBtn {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .stepNumber {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+  
+  .arrowIcon {
+    font-size: 16px;
+  }
+}
+
+/* التأكد من أن الكروت لا تنكسر في grid */
+@media (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* تكييف عدد الأعمدة للشاشات المتوسطة */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

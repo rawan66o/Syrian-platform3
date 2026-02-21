@@ -1,0 +1,269 @@
+.mycourses-dashboard-layout {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   gap: 32px;
+}
+
+.mycourses-dashboard-layout h4 {
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 100%;
+   letter-spacing: 0%;
+   text-align: right;
+   color: black;
+}
+
+.courses-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+   gap: 24px;
+   width: 100%;
+}
+
+.card-course {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   max-width: 463px;
+   height: auto;
+   min-height: 250px;
+   gap: 25px;
+   border-radius: 12px;
+   padding: 24px 20px;
+   border: 1px solid #D9E4E5;
+   background: white;
+   transition: all 0.3s ease;
+}
+
+.card-course:hover {
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+   border-color: 0px;
+}
+
+.card-content-header {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+
+.card-content-header img {
+   width: 85px;
+   height: 85px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 3px solid #f0f0f0;
+}
+
+.card-content-header h5 {
+   margin: 0;
+   color: #072127;
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.card-flex-start {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.card-flex-start h5 {
+   margin: 0;
+   color: #071722;
+   font-size: 16px;
+   font-weight: 500;
+}
+
+.card-flex-row {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+}
+
+.end-course {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   gap: 10px;
+   padding: 20px;
+   width: 203.5px;
+   height: 52px;
+   border-radius: 8px;
+   border-bottom: 1px solid #072127;
+}
+
+.end-course h2 {
+   margin: 0;
+   font-size: 16px;
+   color: #072127;
+}
+
+.end {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   width: 64px;
+   height: 31px;
+   gap: 4px;
+   border-radius: 4px;
+   padding: 0px 16px;
+   color: #34C759;
+   background: #34C75914;
+}
+
+/* ======== التحسينات للتجاوب فقط ======== */
+
+/* 1. للشاشات المتوسطة (تابلت) */
+@media (max-width: 1024px) {
+   .courses-grid {
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+   }
+   
+   .card-content-header h5 {
+      font-size: 18px;
+   }
+}
+
+/* 2. للتابلت الصغير */
+@media (max-width: 768px) {
+   .courses-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+   }
+   
+   .card-course {
+      min-height: 230px;
+      gap: 20px;
+      padding: 20px 16px;
+   }
+   
+   .card-content-header img {
+      width: 75px;
+      height: 75px;
+   }
+   
+   .card-content-header h5 {
+      font-size: 18px;
+   }
+   
+   .mycourses-dashboard-layout h4 {
+      font-size: 22px;
+   }
+}
+
+/* 3. للهواتف الكبيرة */
+@media (max-width: 640px) {
+   .courses-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+   }
+   
+   .card-course {
+      min-height: 220px;
+      gap: 18px;
+      padding: 18px 14px;
+   }
+   
+   .card-content-header {
+      gap: 12px;
+   }
+   
+   .card-content-header img {
+      width: 70px;
+      height: 70px;
+   }
+   
+   .card-content-header h5 {
+      font-size: 17px;
+   }
+   
+   .card-flex-start h5 {
+      font-size: 15px;
+   }
+   
+   .card-flex-row {
+      gap: 15px;
+   }
+}
+
+/* 4. للهواتف الصغيرة */
+@media (max-width: 480px) {
+   .courses-grid {
+      grid-template-columns: 1fr; /* عمود واحد فقط */
+      gap: 16px;
+   }
+   
+   .card-course {
+      min-height: 210px;
+      max-width: 100%; /* إزالة القيد الأقصى */
+      gap: 16px;
+      padding: 16px 12px;
+   }
+   
+   .card-content-header img {
+      width: 65px;
+      height: 65px;
+   }
+   
+   .card-content-header h5 {
+      font-size: 16px;
+   }
+   
+   .card-flex-start h5 {
+      font-size: 14px;
+   }
+   
+   .mycourses-dashboard-layout {
+      gap: 24px;
+   }
+   
+   .mycourses-dashboard-layout h4 {
+      font-size: 20px;
+   }
+}
+
+/* 5. للهواتف الصغيرة جداً */
+@media (max-width: 360px) {
+   .card-course {
+      min-height: 200px;
+      gap: 14px;
+      padding: 14px 10px;
+   }
+   
+   .card-content-header img {
+      width: 60px;
+      height: 60px;
+   }
+   
+   .card-content-header h5 {
+      font-size: 15px;
+   }
+   
+   .card-flex-start {
+      gap: 8px;
+   }
+   
+   .card-flex-start h5 {
+      font-size: 13px;
+   }
+   
+   .card-flex-row {
+      gap: 12px;
+      flex-wrap: wrap; /* إذا كان المحتوى طويلاً */
+   }
+}
+
+/* 6. تحسين الطباعة */
+@media print {
+   .card-course {
+      border: 1px solid #ccc;
+      box-shadow: none;
+      page-break-inside: avoid;
+   }
+   
+   .card-course:hover {
+      box-shadow: none;
+   }
+}

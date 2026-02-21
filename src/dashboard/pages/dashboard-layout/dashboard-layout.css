@@ -1,0 +1,74 @@
+.layout-dashboard {
+    direction: rtl;
+    display: flex;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.layout-dashboard-sidebar {
+    width: 356px;
+    min-width: 356px;
+    height: 100vh;
+    padding: 40px 60px 32px 24px;
+    background: var(--background-cards, #F9F9F9);
+    position: sticky;
+}
+
+.layout-dashboard-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.layout-dashboard-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.layout-dashboard-sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+.layout-dashboard-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+    overflow-y: auto;
+    background: #fff;
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+    .layout-dashboard {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .layout-dashboard-sidebar {
+        width: 100%;
+        height: auto;
+        min-height: 80px;
+        padding: 20px;
+        position: relative;
+    }
+    
+    .layout-dashboard-content {
+        padding: 20px;
+        gap: 20px;
+    }
+}
+
+/* للتابلت */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .layout-dashboard-sidebar {
+        width: 280px;
+        min-width: 280px;
+        padding: 30px 40px 24px 16px;
+    }
+    
+    .layout-dashboard-content {
+        padding: 30px;
+        gap: 30px;
+    }
+}

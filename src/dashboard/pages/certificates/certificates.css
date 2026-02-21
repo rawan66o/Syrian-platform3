@@ -1,0 +1,252 @@
+/* certificates.css */
+
+.layout-certificates {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 26px;
+  width: 100%;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.layout-certificates-title {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.layout-certificates-title h4 {
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 100%;
+   color: #072127;
+   margin: 0;
+}
+
+/* Sorting buttons container */
+.sorting-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 247px;
+  height: 45px;
+  background: #7C83891A;
+  border-radius: 8px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.layout-certificates-title-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 35px;
+  border-radius: 8px;
+  border: 0;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.layout-certificates-title-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.layout-certificates-title-button.active {
+  background: #6DCDE5;
+  color: white;
+}
+
+.layout-certificates-title-button:not(.active) {
+  background: transparent;
+  color: #071722;
+}
+
+.button-certificates {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   border-radius: 8px;
+   width: 210px;
+   height: 52px;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 100%;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   border: none;
+   font-family: inherit;
+}
+
+.button-certificates:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button-certificates:first-child:hover {
+   background: #6DCDE5 !important;
+}
+
+.button-certificates:nth-child(2):hover {
+   background: #6C757D1A !important;
+   border: 0px solid #6C757D1A;
+}
+
+.card-certificates {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  gap: 20px;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #D9E4E5;
+  background: white;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.card-certificates:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+.card-content-header {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+
+.card-content-header img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f0f0;
+  flex-shrink: 0;
+}
+
+.card-content-header h5 {
+   margin: 0;
+   color: #072127;
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 100%;
+}
+
+.card-flex {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.card-flex h5 {
+   margin: 0;
+   color: #071722;
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.card-flex-row {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 24px; /* المسافة بين جميع العناصر */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* تحسينات للأزرار داخل الكارد */
+.card-flex-row .button-certificates img {
+   width: 7px;
+   height: 11px;
+}
+
+.card-flex-row .button-certificates:first-child img {
+   filter: brightness(0) invert(1);
+}
+
+/* تصميم متجاوب */
+@media (max-width: 1200px) {
+   .courses-grid {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+   }
+}
+
+@media (max-width: 768px) {
+   .layout-certificates-title {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+   }
+   
+   .courses-grid {
+      grid-template-columns: 1fr;
+   }
+   
+   .card-flex-row {
+      flex-direction: column;
+   }
+   
+   .button-certificates {
+      width: 100%;
+   }
+   
+   .card-certificates {
+      max-width: 100%;
+   }
+}
+
+@media (max-width: 480px) {
+   .card-content-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+   }
+   
+   .card-content-header img {
+      width: 70px;
+      height: 70px;
+   }
+   
+   .card-content-header h5 {
+      font-size: 18px;
+   }
+   
+   .layout-certificates {
+      gap: 20px;
+   }
+   
+   .card-certificates {
+      padding: 20px 15px;
+      gap: 20px;
+   }
+}
+
+/* تأثيرات لمسية للجوال */
+@media (hover: none) {
+   .button-certificates:hover,
+   .card-certificates:hover {
+      transform: none;
+   }
+   
+   .button-certificates:active {
+      opacity: 0.8;
+   }
+}

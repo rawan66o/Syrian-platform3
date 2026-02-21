@@ -1,0 +1,281 @@
+/* Header.module.css */
+
+.headerContainer {
+  direction: rtl;
+  height: 209px;
+  background: linear-gradient(101.6deg, #E9F0E8 0.88%, rgba(177, 211, 229, 0.66) 28.52%, rgba(210, 244, 234, 0.58) 51.4%, rgba(177, 211, 229, 0.6) 76.65%, #E9F0E8 100%);
+  width: 100%;
+  position: relative;
+}
+
+.headerSpacer {
+  height: 52px;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 0;
+  padding: 0 20px;
+   margin-right: 850px;
+  box-sizing: border-box;
+}
+
+.headerInner {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content:space-between;
+ 
+  gap: 20px;
+}
+
+.title {
+  font-size: 34px;
+  line-height: 100%;
+  margin: 0;
+  font-weight: 700;
+  color: #072127;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.addButton {
+  width: 219px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 150px;
+  color: #ffffff;
+  background: #6DCDE5;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Tajawal', sans-serif;
+  padding: 0 20px;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.addButton:hover {
+  background: #5cb8d0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(109, 205, 229, 0.3);
+}
+
+.addButton:active {
+  transform: translateY(0);
+}
+
+.buttonIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.menuBar {
+  background: rgba(255, 255, 255, 0.5);
+  height: 57px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.menuItem {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #072127;
+  transition: all 0.3s ease;
+  font-family: 'Tajawal', sans-serif;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.menuItem:hover {
+  color: #6DCDE5;
+  background: rgba(109, 205, 229, 0.1);
+}
+
+/* Media Queries للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .headerContainer {
+    height: auto;
+    min-height: 180px;
+  }
+  
+  .headerSpacer {
+    height: 30px;
+  }
+  
+  .headerInner {
+    height: auto;
+    min-height: 80px;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 28px;
+    order: 2;
+  }
+  
+  .addButton {
+    width: 200px;
+    height: 48px;
+    order: 1;
+    font-size: 15px;
+  }
+  
+  .menuBar {
+    height: 50px;
+    gap: 8px;
+    padding: 0 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  .menuItem {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    min-height: 160px;
+  }
+  
+  .headerSpacer {
+    height: 20px;
+  }
+  
+  .headerContent {
+    padding: 0 12px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .addButton {
+    width: 180px;
+    height: 44px;
+    font-size: 14px;
+  }
+  
+  .buttonIcon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .menuBar {
+    height: auto;
+    min-height: 45px;
+    padding: 8px 4px;
+  }
+  
+  .menuItem {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+/* Media Queries للشاشات الكبيرة */
+@media (min-width: 1200px) {
+  .headerContent {
+    max-width: 1200px;
+    padding: 0 24px;
+  }
+  
+  .headerInner {
+    justify-content: space-between;
+    gap: 350px;
+  }
+}
+
+/* Media Queries للشاشات المتوسطة */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .headerContent {
+    max-width: 100%;
+    padding: 0 40px;
+  }
+  
+  .headerInner {
+    justify-content: space-between;
+    gap: 150px;
+  }
+}
+
+/* تحسينات لشاشات صغيرة جداً */
+@media (max-width: 360px) {
+  .title {
+    font-size: 22px;
+  }
+  
+  .addButton {
+    width: 160px;
+    height: 42px;
+    font-size: 13px;
+  }
+  
+  .buttonIcon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .menuBar {
+    gap: 4px;
+  }
+  
+  .menuItem {
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+}
+
+/* تحسينات للوضع الأفقي على الهواتف */
+@media (max-height: 500px) and (orientation: landscape) {
+  .headerContainer {
+    height: auto;
+    min-height: 150px;
+  }
+  
+  .headerInner {
+    min-height: 70px;
+    padding: 15px 0;
+  }
+  
+  .menuBar {
+    height: 40px;
+  }
+}
+
+/* دعم للطباعة */
+@media print {
+  .headerContainer {
+    background: #f0f0f0 !important;
+    height: auto;
+  }
+  
+  .addButton {
+    display: none;
+  }
+  
+  .menuBar {
+    background: #f0f0f0 !important;
+  }
+}

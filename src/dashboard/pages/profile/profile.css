@@ -1,0 +1,178 @@
+/* profile.css */
+
+.flex-col-start {
+   direction: rtl;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 8px;
+}
+
+.layout-form {
+   display: flex;
+   flex-direction: column;
+   gap: 32px;
+   width: 100%;
+}
+
+.flex-row {
+   display: flex;
+   gap: 30px;
+   width: 100%;
+}
+
+.flex-row > .flex-col-start {
+   flex: 1;
+}
+
+.layout-form label {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 30px;
+   color: #072127;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+}
+
+.layout-form label img {
+   width: 20px;
+   height: 20px;
+}
+
+.layout-form input,
+.layout-form select,
+.layout-form textarea {
+   width: 100%;
+   height: 48px;
+   border-radius: 8px;
+   border: 1px solid #D9E4E5;
+   background: #FFFFFF;
+   padding: 0 20px;
+   font-size: 16px;
+   color: #072127;
+   box-sizing: border-box;
+   outline: none;
+   text-align: right;
+}
+
+.layout-form select{
+   padding: 0 40px 0 15px;
+   outline: none;
+   appearance: none;
+   background-repeat: no-repeat;
+   background-position: left 15px center;
+   background-size: 16px;
+}
+
+.layout-form textarea {
+   height: 115px;
+   padding: 12px 20px;
+   resize: none;
+}
+
+.layout-form input::placeholder,
+.layout-form textarea::placeholder,
+.layout-form select:invalid {
+   color: #708387;
+   font-weight: 500;
+}
+
+.layout-form input:hover,
+.layout-form select:hover,
+.layout-form textarea:hover,
+.layout-form input:focus,
+.layout-form select:focus,
+.layout-form textarea:focus {
+   border: 1px solid;
+   border-color: #708387;
+   outline: none;
+}
+
+.input-file {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 107px;
+   border-radius: 10px;
+   background: #6DCDE50D;
+   border: 1px solid #D9E4E5;
+   cursor: pointer;
+   padding: 0 20px;
+   gap: 20px;
+}
+
+.input-file-button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 67px;
+   height: 67px;
+   border-radius: 50%;
+   background: #6DCDE51A;
+   flex-shrink: 0;
+}
+
+.input-file-button img {
+   width: 24px;
+   height: 24px;
+}
+
+.flex-col-start h4 {
+   font-weight: 500;
+   font-size: 22px;
+   line-height: 100%;
+   color: #072127;
+   margin: 0;
+}
+
+.flex-col-start p {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 160%;
+   color: #708387;
+   margin: 0;
+}
+
+.flex-col-start button {
+   font-family: inherit;
+   font-size: inherit;
+}
+
+.certificate-link {
+  color: #6DCDE5;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.certificate-link:hover {
+  text-decoration: underline;
+  color: #6DCDE5;
+}
+
+.delete {
+   width: 195px;
+   height: 52px;
+   border: 0px;
+   border-radius: 8px;
+   color: #708387;
+   background: #EC26251A;
+   font-weight: 500;
+   font-size: 16px;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+   .flex-row {
+      flex-direction: column;
+      gap: 20px;
+   }
+   
+   .layout-form {
+      gap: 20px;
+   }
+}

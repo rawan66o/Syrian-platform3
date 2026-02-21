@@ -34,7 +34,7 @@ const Navbar = () => {
     setAnchorEl(null)
   }
 
-  const menuItems = ['الرئيسية', 'الكورسات', 'المنتدى', 'المشاريع', 'اتصل بنا']
+  const menuItems = ['الصفحة الرئيسية', 'الكورسات', 'المنتدى', 'المشاريع', 'اتصل بنا']
 
   const renderMenu = (
     <Menu
@@ -53,15 +53,16 @@ const Navbar = () => {
       position="static" 
       sx={{ 
         backgroundColor: 'white',
+        height:'80px',
         color: 'black',
         boxShadow: '0px 0px 1px rbga(0,0,0,0.4) ',
-        border: '1px solid #d6d6d6ff',
-        // padding:'5px 50px',
-        // direction: 'rtl'
+        direction: 'rtl',
+        padding:'5px 100px',
       }}
-    >
+      >
       <Toolbar sx={{ 
         justifyContent: 'space-between',
+        boxShadow: '0px 0px 1px rbga(0,0,0,0.4) ',
         py: 1,
         px: { xs: 2, md: 3, xl: 6 }
       }}>
