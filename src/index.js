@@ -70,18 +70,16 @@ root.render(
       <AuthProvider>
         <ToastProvider>
           <ProjectsProvider>
-            <Routes>  
-              <Route index element={<App />} />
-              {/* Auth */}
-              <Route element={<LoginLayout />}>
+            <Routes>
+              {/* ================== Website Layout ================== */}
+              <Route element={<Layout />}>
+                {/* Auth */}
                 <Route path="login" element={<Login />} />
                 <Route path="register" element={<Register />} />
                 <Route path="forgot-password" element={<ForgotPassword />} />
                 <Route path="new-password" element={<NewPassword />} />
-              </Route>
-              {/* ================== Website Layout ================== */}
-              <Route element={<Layout />}>
-
+                {/* Main Page */}
+                <Route index element={<App />} />
                 {/* Courses */}
                 <Route path="courses" element={<Courses />} />
                 <Route path="courses/:courseId" element={<CourseDetails />} />
@@ -118,9 +116,9 @@ root.render(
                 <Route path="add-post" element={<AddPost />} />
 
               </Route>
-                
+
               {/* Other Pages */}
-              <Route element={<VolunteerLayout/>}>
+              <Route element={<VolunteerLayout />}>
                 {/* Guides */}
                 <Route
                   path="student-guide"
