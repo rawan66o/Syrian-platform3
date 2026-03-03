@@ -1,7 +1,43 @@
 import './MobileNav.css'
 
 const MobileNav = ({ onClose }) => {
-  const menuItems = ['الرئيسية', 'الكورسات', 'المنتدى', 'المشاريع', 'اتصل بنا']
+  const menuItems = [
+    {
+      name:'الرئيسية', 
+      logo:'/images/icons/dashboard/home.png',
+      logo2:'/images/icons/dashboard/home/home2.png',
+    },
+    {
+      name:'لوحة التحكم',
+      logo:'/images/icons/dashboard/category/category2.png',
+      logo2:'/images/icons/dashboard/category/category.png',
+      path: '/dashboard' // المسار الرئيسي للداشبورد
+    },
+    {
+      name:'الملف الشخصي',
+      logo:'/images/icons/dashboard/user/user.png',
+      logo2:'/images/icons/dashboard/user/user2.png',
+      path: '/dashboard/profile'
+    }, 
+    {
+      name:'الشهادات',
+      logo:'/images/icons/dashboard/degree2.png',
+      logo2:'/images/icons/dashboard/degree.png',
+      path: '/dashboard/certificates'
+    }, 
+    {
+      name:'المشاريع التطوعية',
+      logo:'/images/icons/dashboard/lambe/project-icon.png',
+      logo2:'/images/icons/dashboard/lambe/project-icon2.png',
+      path: '/dashboard/my-progects'
+    }, 
+    {
+      name:'الكورسات',
+      logo:'/images/icons/dashboard/course-icon/course-icon.png',
+      logo2:'/images/icons/dashboard/course-icon/course-icon3.png',
+      path: '/dashboard/my-courses'
+    }
+  ]
 
   return (
     <div className="mobile-nav">
@@ -53,7 +89,8 @@ const MobileNav = ({ onClose }) => {
               className="nav-item"
               onClick={onClose}
             >
-              {item}
+              <img src={item.logo} alt={item.name} className="nav-item-logo" style={{width:'20px',height:'20px'}}/>
+              {item.name}
             </button>
             {index < menuItems.length - 1 && (
               <div className="menu-divider"></div>

@@ -72,7 +72,7 @@ function Profile({ status = 'volunteer' }) {
         {/* ROW 1: الاسم والبريد */}
         <div className='flex-row'>
           <div className="flex-col-start">
-            <label><img src="/images/icons/dashboard/user.png" alt="" /> الاسم الكامل</label>
+            <label><img src="/images/icons/dashboard/user/user.png" alt="" /> الاسم الكامل</label>
             <input
               type='text'
               placeholder="مثال: محمد صافي"

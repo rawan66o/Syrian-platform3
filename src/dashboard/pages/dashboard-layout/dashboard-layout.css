@@ -39,7 +39,7 @@
 }
 
 /* للموبايل */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .layout-dashboard {
         flex-direction: column;
         padding: 0;
@@ -50,7 +50,7 @@
         height: auto;
         min-height: 80px;
         padding: 20px;
-        position: relative;
+        display: none;
     }
     
     .layout-dashboard-content {
@@ -60,7 +60,7 @@
 }
 
 /* للتابلت */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 992px) and (max-width: 1024px) {
     .layout-dashboard-sidebar {
         width: 280px;
         min-width: 280px;

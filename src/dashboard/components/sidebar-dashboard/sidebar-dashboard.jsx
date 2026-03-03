@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './sidebar-dashboard.css'
 
-function SidebarDashboard() {
+function SidebarDashboard({ isOpen, onClose }) {
     const [activeItem, setActiveItem] = useState('لوحة التحكم');
     const navigate = useNavigate();
 
@@ -48,8 +48,21 @@ function SidebarDashboard() {
             navigate(path);
         }
         
-        console.log(`تم النقر على: ${itemName}`);
+        if (window.innerWidth <= 992) {
+            onClose();
+        }
     }
+
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape' && isOpen) {
+                onClose();
+            }
+        };
+
+        window.addEventListener('keydown', handleEsc);
+        return () => window.removeEventListener('keydown', handleEsc);
+    }, [isOpen, onClose]);
 
     const handleSettingsClick = () => {
         setActiveItem("الاعدادات");
@@ -64,60 +77,79 @@ function SidebarDashboard() {
         // navigate('/login');
         console.log("تم النقر على تسجيل الخروج");
     }
+    
 
-   return(
-    <div>
-        <div className="header-sidebar">
-            <h6>معلوماتي</h6>
-        </div>
-        <div className="content-sidebar">
-           {list.map((item, ind) => (
-            <div 
-                className={`content-sidebar-flex ${activeItem === item.name ? 'active' : ''}`}
-                key={ind}
-                onClick={() => handleItemClick(item.name, item.path)}
+   return (
+        <div>
+            {/* Overlay للجوال */}
+            <div
+                className={`sidebar-overlay ${isOpen ? 'active' : ''}`}
+                onClick={onClose}
+            />
+    
+            {/* زر إغلاق للجوال */}
+            <button
+                className={`sidebar-close-btn ${isOpen ? 'active' : ''}`}
+                onClick={onClose}
+                aria-label="إغلاق القائمة"
             >
-                <img 
-                    src={activeItem === item.name ? item.logo2 : item.logo} 
-                    alt={item.name}
-                />
-                <h5>{item.name}</h5>
-            </div>
-           ))}
-        </div>
-        <div className='footer'>
-            <div className='footer-title'>
-                <h6>اخرى</h6>
-            </div>
-            <div className="footer-content">
-                <div 
-                    className={`content-sidebar-flex ${activeItem === "الاعدادات" ? 'active' : ''}`} 
-                    onClick={() => handleItemClick("الاعدادات")}
-                >
-                    <img style={{width:'20px', height:'20px'}}
-                        src={activeItem === "الاعدادات" 
-                            ? '/images/icons/dashboard/setting/linear.png'
-                            : '/images/icons/dashboard/setting/setting-2.png'} 
-                        alt="الإعدادات"
-                    />
-                    <h5>الاعدادات</h5>
+                ✕
+            </button>
+            
+            {/* حاوية السايدبار الرئيسية */}
+            <div className={`sidebar-container ${isOpen ? 'open' : ''}`}>
+                <h6>معلوماتي</h6>
+                
+                <div className="sidebar-content">
+                    {list.map((item, ind) => (
+                        <div 
+                            className={`content-sidebar-flex ${activeItem === item.name ? 'active' : ''}`}
+                            key={ind}
+                            onClick={() => handleItemClick(item.name, item.path)}
+                        >
+                            <img
+                                src={activeItem === item.name ? item.logo2 : item.logo} 
+                                alt={item.name}
+                            />
+                            <h5>{item.name}</h5>
+                        </div>
+                    ))}
                 </div>
-                <div 
-                    className={`content-sidebar-flex ${activeItem === "تسجيل الخروج" ? 'active' : ''}`} 
-                    onClick={handleLogoutClick}
-                >
-                    <img style={{width:'20px', height:'20px'}}
-                        src={activeItem === "تسجيل الخروج" 
-                            ? '/images/icons/dashboard/Unlock/Unlock-3.png'
-                            : '/images/icons/dashboard/Unlock/Unlock-2.png'} 
-                        alt="تسجيل الخروج"
-                    />
-                    <h5>تسجيل الخروج</h5>
+                
+                <div className='footer'>
+                    <div className='footer-title'>
+                        <h6>اخرى</h6>
+                    </div>
+                    <div className="footer-content">
+                        <div 
+                            className={`content-sidebar-flex ${activeItem === "الاعدادات" ? 'active' : ''}`} 
+                            onClick={handleSettingsClick}
+                        >
+                            <img
+                                src={activeItem === "الاعدادات" 
+                                    ? '/images/icons/dashboard/setting/linear.png'
+                                    : '/images/icons/dashboard/setting/setting-2.png'} 
+                                alt="الإعدادات"
+                            />
+                            <h5>الاعدادات</h5>
+                        </div>
+                        <div 
+                            className={`content-sidebar-flex ${activeItem === "تسجيل الخروج" ? 'active' : ''}`} 
+                            onClick={handleLogoutClick}
+                        >
+                            <img
+                                src={activeItem === "تسجيل الخروج" 
+                                    ? '/images/icons/dashboard/Unlock/Unlock-3.png'
+                                    : '/images/icons/dashboard/Unlock/Unlock-2.png'} 
+                                alt="تسجيل الخروج"
+                            />
+                            <h5>تسجيل الخروج</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-   )
+    );
 }
 
 export default SidebarDashboard

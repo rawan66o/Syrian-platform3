@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './Navbar.css'
 import {
   AppBar,
   Toolbar,
@@ -20,11 +21,12 @@ import {
 } from '@mui/icons-material'
 import MobileNav from './MobileNav'
 
-const Navbar = () => {
+const Navbar = ({ isMobile, onToggleSidebar, isSidebarOpen }) => {
+  const [unreadCount, setUnreadCount] = useState(3);
   const [open, setOpen] = useState(false)
   const [anchorEl, setAnchorEl] = useState(null)
   // eslint-disable-next-line
-  const isMobile = useMediaQuery('(max-width:1199px)') // lg breakpoint
+  const isMobileMedia = useMediaQuery('(max-width:1199px)') // lg breakpoint
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget)
@@ -49,180 +51,62 @@ const Navbar = () => {
   )
 
   return (
-    <AppBar 
-      position="static" 
-      sx={{ 
-        backgroundColor: 'white',
-        height:'80px',
-        color: 'black',
-        boxShadow: '0px 0px 1px rbga(0,0,0,0.4) ',
-        direction: 'rtl',
-        padding:'5px 100px',
-      }}
-      >
-      <Toolbar sx={{ 
-        justifyContent: 'space-between',
-        boxShadow: '0px 0px 1px rbga(0,0,0,0.4) ',
-        py: 1,
-        px: { xs: 2, md: 3, xl: 6 }
-      }}>
-        {/* الجزء الأيسر - الشعار والقائمة */}
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-          <Box
-            component="img"
-            src="/images/logo/spLogo12.png"
-            alt="شعار المنصة السورية"
-            sx={{
-              width: '162px',
-              height: '62px'
-            }}
-          />
-          <Divider orientation="vertical" flexItem sx={{ mx: 1 }} />
-          
-          {/* القائمة - تظهر فقط في الشاشات الكبيرة */}
-          <Box sx={{ display: { xs: 'none', lg: 'flex' }, gap: 3 }}>
-            {menuItems.map((item) => (
-              <Typography variant='h6'
-                key={item}
-                sx={{
-                  cursor: 'pointer',
-                  color:'#70798B',
-                  '&:hover': {
-                    color: '#6f7a91ff',
-                  },
-                }}
-              >
-                {item}
-              </Typography>
-            ))}
-          </Box>
-        </Box>
-        <Box sx={{
-          position: 'relative',
-          display: 'flex',
-          alignItems: 'center',
-          width: 'fit-content'
-        }}>
-          <input 
-            placeholder='البحث' 
-            type='search'
+    <div className="navbar">
+      <div className='nav-right'>
+        <img className='icon-logo' src="/images/logo/spLogo12.png" />
+        <div className='divid' />
+        {menuItems.map((item) => (
+          <h6
+            key={item}
             style={{
-              borderRadius: '62px',  width: '271px', 
-              height: '44px', background: '#F7F7F7',
-              border: '0px solid #E0E0E0',   
-              padding: '0 50px 0 20px', 
+              cursor: 'pointer',
+              color:'#70798B',
               fontSize: '16px',
-              outline: 'none',
-              direction: 'rtl', // للنص العربي
-              boxSizing: 'border-box' // مهم لتجنب مشاكل العرض
+              '&:hover': {
+                color: '#6f7a91ff',
+              },
             }}
-            onFocus={(e) => {
-              e.target.style.border = '0px'; // تأثير عند التركيز
-            }}
-            onBlur={(e) => {
-              e.target.style.border = '0px solid #E0E0E0';
-            }}
-          />
-          <img 
-            src='/icons/search_icon/search_normal.svg' 
-            alt='بحث' // وصف بديل مهم للوصول
-            style={{
-              width: '24px',
-              height: '24px',
-              position: 'absolute',
-              right: '15px', // مكان الأيقونة داخل الحقل
-              pointerEvents: 'none' // لجعل النقر يمر للحقل لا للأيقونة
-            }}
-          />
-        </Box>
-        {/* الجزء الأيمن - الإشعارات والملف الشخصي */}
-        <Box sx={{ 
-          display: { xs: 'none', lg: 'flex' }, 
-          alignItems: 'center', 
-          // justifyContent:'end',
-          gap: 2 
-        }}>
-          {/* الإشعارات واللغة */}
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <IconButton 
-              sx={{ 
-                backgroundColor: '#f5f5f5',
-                borderRadius: '8px',
-                width:'48px',
-                height:'48px',
-                '&:hover': { backgroundColor: '#eeeeee' }
-              }}
-            >
-              <Badge badgeContent={4} color="error">
-                <NotificationsIcon fontSize='medium' />
-              </Badge>
-            </IconButton>
-            
-            <IconButton 
-              sx={{ 
-                backgroundColor: '#f5f5f5',
-                borderRadius: '8px',
-                width:'48px',
-                height:'48px',
-                '&:hover': { backgroundColor: '#eeeeee' }
-              }}
-            >
-              <LanguageIcon fontSize='medium' />
-            </IconButton>
-          </Box>
-
-          <Divider orientation="vertical" flexItem sx={{ mx: 1 }} />
-
-          {/* الملف الشخصي */}
-          <Box 
-            sx={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: 1,
-              cursor: 'pointer'
-            }}
-            onClick={handleProfileMenuOpen}
           >
-            <Avatar
-              src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg"
-              sx={{
-                width: 32,
-                height: 32
-              }}
-            />
-            <Typography sx={{ fontWeight: 500, background:'#ffff' }}>
-              المدربة ريم فالح
-            </Typography>
-          </Box>
-        </Box>
+            {item}
+          </h6>
+        ))}
 
-        {/* زر القائمة - يظهر فقط في الشاشات الصغيرة */}
-        <IconButton
-          edge="end"
-          onClick={() => setOpen(!open)}
-          sx={{ display: { lg: 'none' }, color: 'black' }}
-        >
-          <MenuIcon />
-        </IconButton>
-      </Toolbar>
+      </div>
+      <div className='nav_center'>
+        <input className='search_input' />
+        <img className='icon_search'
+          src='/icons/search_icon/search_normal.svg' 
+          alt='بحث' 
+        />
+      </div>
+      <div className='nav_left'>
+        <div className='notificat'>
+          <div className='btn_notification'>
+            <img src='/images/icons/dashboard/notification.png' className='not_image' />
+            {unreadCount > 0 && (
+              <span className='notification_count'>
+                {unreadCount}
+              </span>
+            )}
+          </div>
+          
+          <div className='btn_notification' >
+            <img src='/images/icons/dashboard/earth.png' className='lang_images'/>
+          </div>
+        </div>
 
-      {/* القائمة الجانبية للجوال */}
-      <Drawer
-        anchor="left"
-        open={open}
-        onClose={() => setOpen(false)}
-        sx={{
-          display: { lg: 'none' },
-          '& .MuiDrawer-paper': {
-            width: 280,
-          },
-        }}
-      >
-        <MobileNav onClose={() => setOpen(false)} />
-      </Drawer>
+        {isMobile && (
+          <div className='btn_notification' onClick={onToggleSidebar}>
+            <img className='not_image' src='/images/icons/dashboard/nav-icon.svg'/>
+          </div>
+        )}
 
-      {renderMenu}
-    </AppBar>
+        <div className='profile' onClick={handleProfileMenuOpen}>
+          <img className='profile_avatar' src='/images/logo/2.jpg'/>
+          <h6>المدربة ريم فالح</h6>
+        </div>
+      </div>
+    </div>
   )
 }
 
