@@ -35,7 +35,7 @@ const AddCourse = () => {
     const bottomBarNextButton = step === "3" ? "اضافة الدورة ونشره" : "التالي";
 
     const previousHandler = () => {
-        if (Number(step) >= 1) {
+        if (Number(step) > 1) {
             setStep(`${Number(step) - 1}`);
         }
     };
