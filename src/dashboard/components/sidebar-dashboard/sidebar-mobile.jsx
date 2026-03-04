@@ -1,18 +1,23 @@
-import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './sidebar-dashboard.css'
+import { useState, useEffect } from 'react';
 
-function SidebarDashboard({ isOpen, onClose }) {
+function SidebarMobile({ isOpen, onClose }) {
     const [activeItem, setActiveItem] = useState('لوحة التحكم');
     const navigate = useNavigate();
 
-    // تحديد المسارات لكل عنصر
     const list = [
+        {
+            name:'الصفحة الرئيسية',
+            logo:'/images/icons/dashboard/home/home.png',
+            logo2:'/images/icons/dashboard/home/home-active.png',
+            path: '/' 
+        },
         {
             name:'لوحة التحكم',
             logo:'/images/icons/dashboard/category/category2.png',
             logo2:'/images/icons/dashboard/category/category.png',
-            path: '/dashboard' // المسار الرئيسي للداشبورد
+            path: '/dashboard'
         },
         {
             name:'الملف الشخصي',
@@ -38,57 +43,46 @@ function SidebarDashboard({ isOpen, onClose }) {
             logo2:'/images/icons/dashboard/course-icon/course-icon3.png',
             path: '/dashboard/my-courses'
         }
-    ]
+    ];
+
+    // منع التمرير عندما يكون السايدبار مفتوحاً
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
 
     const handleItemClick = (itemName, path) => {
         setActiveItem(itemName);
         
-        // التنقل إلى المسار المحدد
         if (path) {
             navigate(path);
         }
         
-        if (window.innerWidth <= 992) {
-            onClose();
-        }
-    }
+        onClose(); // إغلاق بعد النقر دائماً
+    };
 
-    useEffect(() => {
-        const handleEsc = (e) => {
-            if (e.key === 'Escape' && isOpen) {
-                onClose();
-            }
-        };
+    if (!isOpen) return null;
 
-        window.addEventListener('keydown', handleEsc);
-        return () => window.removeEventListener('keydown', handleEsc);
-    }, [isOpen, onClose]);
-
-    const handleSettingsClick = () => {
-        setActiveItem("الاعدادات");
-        // هنا يمكنك التنقل إلى صفحة الإعدادات إذا كان لديك مسار لها
-        // navigate('/dashboard/settings');
-        console.log("تم النقر على الإعدادات");
-    }
-
-    const handleLogoutClick = () => {
-        setActiveItem("تسجيل الخروج");
-        // هنا يمكنك إضافة منطق تسجيل الخروج
-        // navigate('/login');
-        console.log("تم النقر على تسجيل الخروج");
-    }
-    
-    if (!isOpen) {
-        return null;
-    }
-
-   return (
-        <div>
+    return (
+        <div className="sidebar-mobile">
+            {/* Overlay */}
+            <div className="sidebar-mobile-overlay" onClick={onClose} />
             
-            {/* حاوية السايدبار الرئيسية */}
-            <div className='sidebar-container'>
-                <h6>معلوماتي</h6>
-                
+            {/* السايدبار */}
+            <div className="sidebar-mobile-content">
+                {/* رأس السايدبار */}
+                <div className="sidebar-mobile-header">
+                    <button className="close-btn" onClick={onClose}>✕</button>
+                    {/* <img className="sidebar-logo" src="/images/logo/spLogo12.png" alt="logo" /> */}
+                </div>
+
+                {/* محتوى القائمة */}
                 <div className="sidebar-content">
                     {list.map((item, ind) => (
                         <div 
@@ -104,15 +98,16 @@ function SidebarDashboard({ isOpen, onClose }) {
                         </div>
                     ))}
                 </div>
-                
-                <div className='footer'>
+
+                {/* قسم أخرى (إعدادات، تسجيل خروج) */}
+                <div className='sidebar-footer'>
                     <div className='footer-title'>
-                        <h6>اخرى</h6>
+                        <h6>أخرى</h6>
                     </div>
                     <div className="footer-content">
                         <div 
                             className={`content-sidebar-flex ${activeItem === "الاعدادات" ? 'active' : ''}`} 
-                            onClick={handleSettingsClick}
+                            onClick={() => handleItemClick("الاعدادات")}
                         >
                             <img
                                 src={activeItem === "الاعدادات" 
@@ -124,7 +119,11 @@ function SidebarDashboard({ isOpen, onClose }) {
                         </div>
                         <div 
                             className={`content-sidebar-flex ${activeItem === "تسجيل الخروج" ? 'active' : ''}`} 
-                            onClick={handleLogoutClick}
+                            onClick={() => {
+                                // منطق تسجيل الخروج
+                                console.log("تسجيل الخروج");
+                                onClose();
+                            }}
                         >
                             <img
                                 src={activeItem === "تسجيل الخروج" 
@@ -141,4 +140,4 @@ function SidebarDashboard({ isOpen, onClose }) {
     );
 }
 
-export default SidebarDashboard
+export default SidebarMobile;

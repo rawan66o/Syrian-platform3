@@ -18,6 +18,12 @@
     margin-bottom: 20px;
 }
 
+.sidebar-mobile-content{
+    position: absolute;
+    width: 500px;
+    background: white;
+}
+
 .content-sidebar-flex {
     display: flex;
     align-items: center;
@@ -87,7 +93,7 @@
     padding: 0 12px;
 }
 
-.sidebar-overlay {
+.sidebar-mobile-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -100,7 +106,7 @@
     transition: opacity 0.3s ease;
 }
 
-.sidebar-overlay.active {
+.sidebar-mobile-overlay.active {
     display: block;
     opacity: 1;
 }
@@ -153,11 +159,11 @@
         flex-direction: column;
     }
     
-    .sidebar-overlay {
+    .sidebar-mobile-overlay {
         display: none;
     }
     
-    .sidebar-overlay.active {
+    .sidebar-mobile-overlay.active {
         display: block;
     }
     
@@ -194,7 +200,7 @@
         padding: 0;
     }
     
-    .sidebar-overlay, .sidebar-close-btn {
+    .sidebar-mobile-overlay, .sidebar-close-btn {
         display: none !important; 
     }
 }
