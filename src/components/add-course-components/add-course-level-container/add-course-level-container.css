@@ -76,3 +76,8 @@
   border: 1px solid #6dcde5;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .add_course_level_container_full {
+    width: 100%;
+  }
+}

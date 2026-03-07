@@ -48,15 +48,29 @@ const AddCourse = () => {
 
     return <div className="add_course_page">
         <div className="add_course_page_container">
-            {Number(step) <= 3 && <AddCourseProgressBar step={step} />}
-            {currentStepForm()}
+            {
+                Number(step) <= 3 &&
+                <AddCourseProgressBar step={step} />
+            }
+            {
+                currentStepForm()
+            }
         </div>
-        {Number(step) <= 3 && <div className="add_course_bottom_bar_container">
-            <div className="add_course_bottom_bar">
-                <button className="add_course_bottom_bar_previous" onClick={previousHandler}>السابق</button>
-                <button className="add_course_bottom_bar_next" onClick={nextHandler}>{bottomBarNextButton}</button>
+        {
+            Number(step) <= 3 &&
+            <div className="add_course_bottom_bar_container">
+                <div className="add_course_bottom_bar">
+                    <button className="add_course_bottom_bar_previous"
+                        onClick={previousHandler}>
+                        السابق
+                    </button>
+                    <button className="add_course_bottom_bar_next"
+                        onClick={nextHandler}>
+                        {bottomBarNextButton}
+                    </button>
+                </div>
             </div>
-        </div>}
+        }
     </div>
 };
 export default AddCourse;

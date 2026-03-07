@@ -3,14 +3,15 @@
   margin: 0;
   padding: 0 100px;
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   margin-top: 32px;
   margin-bottom: 150px;
+  display: grid;
+  grid-template-columns: 410px 1fr;
+  grid-template-rows: auto;
+  gap: 40px;
 }
 .rate_course_and_trainer {
-  min-width: 806px;
+  max-width: 806px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -70,4 +71,24 @@
   letter-spacing: 0;
   text-align: center;
   color: #e5f6f9;
+}
+@media (max-width: 1440px) {
+  .rate_course_and_trainer_page {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1023px) {
+  .rate_course_and_trainer_page {
+    padding: 0 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .rate_course_and_trainer {
+    grid-row-start: 1;
+  }
+}
+@media (max-width: 767px) {
+  .rate_course_and_trainer_page {
+    padding: 0 10px;
+  }
 }

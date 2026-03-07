@@ -1,8 +1,9 @@
 .course_certificate_modal {
+  width: 100%;
   position: fixed;
-  top: 50%;
+  top: 10px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 9999;
   animation: certificateOpacity 300ms ease-out;
 }
@@ -12,5 +13,17 @@
   }
   100% {
     opacity: 1;
+  }
+}
+.course_certificate_modal_image {
+  width: 460px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+}
+@media (max-width: 500px) {
+  .course_certificate_modal_image {
+    width: 95%;
   }
 }

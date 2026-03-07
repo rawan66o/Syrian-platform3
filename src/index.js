@@ -55,7 +55,6 @@ import MycoursesDashboard from "./dashboard/pages/mycourses-dashboard/mycourses-
 import MyProgectes from "./dashboard/pages/my-volunteer-progect/my-volunteer-progect";
 import { ToastProvider } from "./context/ToastContext";
 import { ProjectsProvider } from "./context/volunteer-projects-context";
-import LoginLayout from "./layout/login-layout";
 import FormLayout from "./layout/form-layout";
 import VolunteerLayout from "./layout/volunteer-layout";
 import { AuthProvider } from "./context/auth-context";
@@ -138,7 +137,7 @@ root.render(
                 <Route path="forum/:projectId" element={<PostPost />} />
               </Route>
               <Route element={<FormLayout />}>
-                <Route path="forum" element={<Forum />} /> ///
+                <Route path="forum" element={<Forum />} />
                 <Route path="project-application/:projectId" element={<ApplicationForMembership />} />
                 <Route path="add-project" element={<AddProject />} />
               </Route>

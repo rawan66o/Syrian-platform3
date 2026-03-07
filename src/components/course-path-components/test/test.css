@@ -1,5 +1,5 @@
 .test {
-  min-width: 806px;
+  max-width: 806px;
   margin-bottom: 150px;
 }
 .test_header {
@@ -28,6 +28,7 @@
   display: flex;
   justify-content: flex-start;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .lower_header_content {
   display: flex;
@@ -192,4 +193,15 @@
   align-content: center;
   margin: 32px auto 0 auto;
   cursor: pointer;
+}
+@media (max-width: 1023px) {
+  .test {
+    margin-bottom: 20px;
+    grid-row-start: 1;
+  }
+}
+@media (max-width: 767px) {
+  .test_title {
+    font-size: 24px;
+  }
 }

@@ -23,8 +23,10 @@ const Test = ({ testDetails }) => {
             </div>
         </div>
         <div className="tests">
-            {testDetails.questions.map(question => <Question key={question.id} question={question} />
-            )}
+            {
+                testDetails.questions.map(question =>
+                    <Question key={question.id} question={question} />)
+            }
         </div>
         <div className="submit_test_btn">تسليم الاختبار</div>
     </div>

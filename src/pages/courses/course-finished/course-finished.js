@@ -72,7 +72,10 @@ const CourseFinished = () => {
                 </button>
             </div>
         </div>
-        {showCertificate && ReactDOM.createPortal(<CourseCertificateModal close={hideCertificateHandler} />, document.getElementById("certificate-root"))}
+        {
+            showCertificate &&
+            ReactDOM.createPortal(<CourseCertificateModal close={hideCertificateHandler} />, document.getElementById("certificate-root"))
+        }
     </div>
 };
 export default CourseFinished;

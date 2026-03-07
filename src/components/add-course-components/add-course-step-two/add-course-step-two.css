@@ -7,6 +7,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 32px;
+  min-height: 70vh;
 }
 .add_course_step_two_add_level_container {
   width: 700px;
@@ -64,3 +65,8 @@
   gap: 24px;
   padding: 20px 20px 20px 24px;
 } */
+@media (max-width: 767px) {
+  .add_course_step_two_add_level_container {
+    width: 100%;
+  }
+}

@@ -113,6 +113,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .add_course_was_hard_container {
   display: flex;
@@ -161,4 +162,27 @@
   font-size: 14px;
   letter-spacing: 0%;
   color: #072127;
+}
+@media (max-width: 767px) {
+  .add_course_step_five {
+    min-width: 0;
+    width: 100%;
+  }
+  .add_course_finished_p_container h1 {
+    font-size: 24px;
+  }
+  .add_course_finished_p_container p {
+    font-size: 16px;
+  }
+  .add_course_finished_buttons {
+    gap: 10px;
+  }
+  .add_course_review_btn {
+    width: 160px;
+    font-size: 16px;
+  }
+  .add_course_main_btn {
+    width: 160px;
+    font-size: 16px;
+  }
 }

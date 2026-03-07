@@ -1,5 +1,5 @@
 .marks {
-  min-width: 806px;
+  max-width: 806px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -46,7 +46,7 @@
   color: #708387;
 }
 .marks_container {
-  min-width: 474px;
+  max-width: 474px;
   min-height: 157px;
   display: flex;
   justify-content: space-between;
@@ -144,6 +144,8 @@
   padding: 20px 16px;
   background-color: #ffffff;
   box-shadow: 0 0 10px 0 #00000014;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .marks_test_title {
   font-weight: 500;
@@ -211,4 +213,15 @@
   letter-spacing: 0;
   text-align: center;
   color: #ffffff;
+}
+@media (max-width: 1023px) {
+  .marks {
+    margin-bottom: 20px;
+    grid-row-start: 1;
+  }
+}
+@media (max-width: 767px) {
+  .marks_title {
+    font-size: 24px;
+  }
 }

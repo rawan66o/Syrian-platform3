@@ -7,12 +7,7 @@
   gap: 24px;
 }
 .add_course_dividing_line {
-  max-width: 99.5vw;
-  width: 99.5vw;
-  right: 50%;
-  left: 50%;
-  margin-right: -50vw;
-  margin-left: -50vw;
+  width: 100%;
   border-top: 1px solid #d9e4e5;
   position: absolute;
   top: 0;
@@ -132,4 +127,56 @@
   border: 2px solid #6dcde5;
   border-radius: 10px;
   margin-top: 26.25px;
+}
+@media (max-width: 767px) {
+  .add_course_progress_bar_elements {
+    width: 80%;
+  }
+  .add_course_progress_bar_step_p1 {
+    font-size: 12px;
+    width: 110px;
+  }
+  .add_course_progress_bar_step_p2 {
+    font-size: 14px;
+    width: 110px;
+  }
+  .add_course_step_line_empty {
+    width: 100px;
+  }
+  .add_course_step_line_done {
+    width: 100px;
+  }
+}
+@media (max-width: 500px) {
+  .add_course_step_line_empty {
+    width: 80px;
+    margin-top: 20px;
+  }
+  .add_course_step_line_done {
+    width: 80px;
+    margin-top: 20px;
+  }
+  .add_course_progress_bar_step {
+    width: 40px;
+  }
+  .add_course_step_border_empty {
+    width: 40px;
+    height: 40px;
+  }
+  .add_course_step_border_done {
+    width: 40px;
+    height: 40px;
+  }
+  .add_course_step_done {
+    width: 40px;
+    height: 40px;
+  }
+  .add_course_step_border_pending {
+    width: 40px;
+    height: 40px;
+  }
+  .add_course_progress_bar_step_p2 {
+    font-size: 13px;
+    width: 110px;
+  }
 }

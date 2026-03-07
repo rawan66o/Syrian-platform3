@@ -2,7 +2,7 @@
 .footer_container {
   position: relative;
   width: 100%;
-  height: 500px;
+  min-height: 500px;
   padding: 70px 120px;
   background-color: #04181c;
   display: flex;
@@ -87,6 +87,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .footer_rights {
   font-weight: 500;
@@ -112,4 +114,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 1440px) {
+  .footer_container {
+    padding: 70px 80px;
+  }
+}
+@media (max-width: 1023px) {
+  .footer_container {
+    padding: 70px 40px;
+  }
+  .platform_description {
+    max-width: 290px;
+  }
+}
+@media (max-width: 767px) {
+  .footer_container {
+    padding: 70px 20px;
+  }
+  .footer_content {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0;
+    row-gap: 40px;
+  }
+  .platform_description {
+    max-width: 100%;
+    width: 100%;
+  }
 }

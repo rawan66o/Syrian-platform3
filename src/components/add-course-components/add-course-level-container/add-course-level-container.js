@@ -80,23 +80,24 @@ const AddCourseLevelContainer = ({ levelNum, unitId, state, dispatch }) => {
                 step="2_1"
             />
         </div>
-        {lessons.map(lesson =>
-        (lesson.type === "lesson" ?
-            <AddCourseAddLessonContainer key={lesson.id}
-                lessonNum={lesson.lessonNum}
-                unitId={unit.id}
-                lessonId={lesson.id}
-                state={state}
-                dispatch={dispatch}
-            /> :
-            <AddCourseAddTestContainer key={lesson.id}
-                testNum={lesson.lessonNum}
-                unitId={unit.id}
-                testId={lesson.id}
-                state={state}
-                dispatch={dispatch}
-            />)
-        )}
+        {
+            lessons.map(lesson =>
+            (lesson.type === "lesson" ?
+                <AddCourseAddLessonContainer key={lesson.id}
+                    lessonNum={lesson.lessonNum}
+                    unitId={unit.id}
+                    lessonId={lesson.id}
+                    state={state}
+                    dispatch={dispatch}
+                /> :
+                <AddCourseAddTestContainer key={lesson.id}
+                    testNum={lesson.lessonNum}
+                    unitId={unit.id}
+                    testId={lesson.id}
+                    state={state}
+                    dispatch={dispatch}
+                />)
+            )}
         <div className="add_course_add_level_lesson_test_buttons">
             <button className="add_course_add_lesson_button"
                 onClick={() => addLessonHandler("lesson")}>

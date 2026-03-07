@@ -17,7 +17,7 @@
   align-items: center;
   gap: 32px;
 }
-.volunteer_projects_container_header h2 {
+.volunteer_projects_container_header_h2 {
   font-weight: 700;
   font-size: 24px;
   line-height: 100%;
@@ -25,10 +25,11 @@
   text-align: center;
   color: #6dcde5;
 }
-.volunteer_projects_container_header h1 {
+.volunteer_projects_container_header_h1 {
+  width: 100%;
   font-weight: 700;
   font-size: 38px;
-  line-height: 0px;
+  line-height: 100%;
   letter-spacing: 0px;
   text-align: center;
   vertical-align: middle;
@@ -37,8 +38,10 @@
 .volunteer_projects_cards {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 .volunteer_projects_card {
   background-color: #fff;
@@ -51,6 +54,10 @@
   justify-content: flex-start;
   align-items: center;
   gap: 30px;
+}
+.volunteer_projects_card_image {
+  width: 100%;
+  object-fit: cover;
 }
 .volunteer_projects_card_details {
   padding: 0 20px;
@@ -84,7 +91,8 @@
   text-align: right;
   color: #072127;
 }
-.volunteer_projects_card_details h1 {
+.volunteers_card_date_h1 .volunteer_projects_card_details_h1 {
+  width: 100%;
   font-weight: 700;
   font-size: 22px;
   line-height: 100%;
@@ -135,7 +143,7 @@
 }
 .volunteer_view_project_btn {
   width: 156px;
-  height: 28px;
+  height: 46px;
   border-radius: 4px;
   border: none;
   background-color: #fff;
@@ -149,8 +157,13 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  align-items: flex-start;
+  align-items: center;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.volunteer_view_project_btn:hover {
+  background-color: #072127;
+  color: #fff;
 }
 .view_all_volunteer_projects_btn {
   width: 239px;
@@ -165,4 +178,49 @@
   color: #ffffff;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.view_all_volunteer_projects_btn:hover {
+  background-color: #072127;
+}
+@media (max-width: 1440px) {
+  .volunteer_projects_container {
+    padding: 52px 60px;
+  }
+  .volunteer_projects_container_header_h2 {
+    font-size: 22px;
+  }
+  .volunteer_projects_container_header_h1 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 1023px) {
+  .volunteer_projects_container {
+    padding: 52px 50px;
+  }
+  .volunteer_projects_container_header_h2 {
+    font-size: 20px;
+  }
+  .volunteer_projects_container_header_h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .volunteer_projects_container {
+    padding: 52px 10px;
+  }
+  .volunteer_projects_container_header_h2 {
+    font-size: 18px;
+  }
+  .volunteer_projects_container_header_h1 {
+    font-size: 26px;
+  }
+  .volunteer_projects_card {
+    width: 320px;
+    height: 430px;
+  }
+  .volunteers_card_date_h1 .volunteer_projects_card_details_h1 {
+    font-weight: 600;
+    font-size: 18px;
+  }
 }

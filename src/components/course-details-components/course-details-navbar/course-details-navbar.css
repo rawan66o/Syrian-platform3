@@ -64,7 +64,7 @@
 }
 .course_details_navbar_search_container {
   height: 44px;
-  width: 296px;
+  max-width: 296px;
   position: relative;
 }
 .course_details_nav_search_input {
@@ -151,4 +151,101 @@
   letter-spacing: 0;
   text-align: right;
   color: #072127;
+}
+.menu_open_btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: none;
+}
+.backdrop_nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: #00000082;
+  z-index: 100;
+}
+@media (max-width: 1440px) {
+  .course_details_navbar {
+    padding: 25px 25px;
+  }
+  .course_details_navbar_search_container {
+    max-width: 160px;
+  }
+  .nav_body_icon_links {
+    gap: 16px;
+  }
+  .nav_links_to_pages {
+    gap: 8px;
+  }
+  .signup_notifications_language_container {
+    gap: 16px;
+  }
+  .notifications_language_container {
+    gap: 10px;
+  }
+}
+@media (max-width: 1023px) {
+  .course_details_navbar {
+    padding: 25px 50px;
+  }
+  .backdrop_nav_show {
+    display: block;
+  }
+  .nav_separation_line {
+    display: none;
+  }
+  .nav_links_to_pages {
+    display: none;
+  }
+  .course_details_navbar_search_container {
+    display: none;
+  }
+  .menu_nav_links {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfdfd;
+    z-index: 110;
+    padding: 80px 20px;
+    text-align: center;
+    gap: 30px;
+    animation: slideMenu 0.3s ease-in-out;
+  }
+  @keyframes slideMenu {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .clicked_nav_link {
+    text-align: center;
+    align-self: center;
+  }
+  .course_nav_link {
+    text-align: center;
+  }
+  .course_nav_link:hover {
+    align-self: center;
+  }
+  .navbar_user_container_username {
+    display: none;
+  }
+  .menu_open_btn {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .course_details_navbar {
+    padding: 25px 10px;
+  }
+  .signup_notifications_language_container {
+    gap: 8px;
+  }
 }

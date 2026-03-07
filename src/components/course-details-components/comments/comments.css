@@ -145,3 +145,27 @@
   text-align: right;
   color: #708387;
 }
+@media (max-width: 1440px) {
+  .comments_header {
+    padding: 0 60px;
+  }
+  .comments_container {
+    padding: 0 60px 0 10px;
+  }
+}
+@media (max-width: 1023px) {
+  .comments_header {
+    padding: 0 50px;
+  }
+  .comments_container {
+    padding: 0 50px 0 10px;
+  }
+}
+@media (max-width: 767px) {
+  .comments_header {
+    padding: 0 10px;
+  }
+  .comments_container {
+    padding: 0 10px 0 10px;
+  }
+}

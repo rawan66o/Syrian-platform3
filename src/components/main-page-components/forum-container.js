@@ -1,3 +1,4 @@
+import SmallLeftArrow from "../icons/small-left-arrow/small-left-arrow";
 import "./forum-container.css";
 
 
@@ -36,28 +37,32 @@ const ForumContainer = () => {
             <h1>آخر الاخبار والمنشورات هذه الفترة</h1>
         </div>
         <div className="forum_cards">
-            {posts.map(post => <div key={post.id} className="forum_post_card">
-                <img src={post.img} alt="" />
-                <div className="forum_post_content">
-                    <div className="forum_post_date_comments_title">
-                        <div className="forum_post_date_comments">
-                            <div className="forum_post_date">
-                                <img src="/icons/chalender/calendar.svg" alt="" />
-                                <p>{new Date(post.date).toLocaleDateString()}</p>
+            {
+                posts.map(post => <div key={post.id} className="forum_post_card">
+                    <img src={post.img} alt="" className="main_page_forum_img" />
+                    <div className="forum_post_content">
+                        <div className="forum_post_date_comments_title">
+                            <div className="forum_post_date_comments">
+                                <div className="forum_post_date">
+                                    <img src="/icons/chalender/calendar.svg" alt="" />
+                                    <p>{new Date(post.date).toLocaleDateString()}</p>
+                                </div>
+                                <p className="forum_post_date_comments_comment">+{post.commentsNum} تعليق</p>
                             </div>
-                            <p className="forum_post_date_comments_comment">+{post.commentsNum} تعليق</p>
+                            <h1>{post.title}</h1>
                         </div>
-                        <h1>{post.title}</h1>
+                        <p className="forum_post_desc">{post.description}</p>
+                        <button className="forum_post_content_btn">
+                            <p>عرض المنشور</p>
+                            <SmallLeftArrow />
+                        </button>
                     </div>
-                    <p className="forum_post_desc">{post.description}</p>
-                    <button className="forum_post_content_btn">
-                        <p>عرض المنشور</p>
-                        <img src="/icons/previous_icon/Prev.svg" alt="" />
-                    </button>
-                </div>
-            </div>)}
+                </div>)
+            }
         </div>
-        <button className="view_all_posts_forum_container">عرض جميع المنشورات</button>
+        <button className="view_all_posts_forum_container">
+            عرض جميع المنشورات
+        </button>
     </div>
 };
 export default ForumContainer;

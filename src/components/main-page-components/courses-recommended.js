@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import "./courses-recommended.css";
 import { useState } from "react";
+import SmallRightArrowIcon from "../icons/small-right-arrow/small-right-arrow";
 
 
 const CoursesRecommended = () => {
@@ -49,40 +50,49 @@ const CoursesRecommended = () => {
     return <div className="courses_recommended_container">
         <div className="courses_recommended_header_container">
             <div className="courses_recommended">
-                <h2>الكورسات الموصى بها</h2>
-                <h1>اكتشف مجموعة واسعة من أكثر من 250 دورة.</h1>
+                <h2 className="courses_recommended_h2">الكورسات الموصى بها</h2>
+                <h1 className="courses_recommended_h1">اكتشف مجموعة واسعة من أكثر من 250 دورة.</h1>
             </div>
             <div className="courses_recommended_filter_container">
-                {categories.map(category =>
-                    <button key={category.id} onClick={() => filterHandler(category.code)} className={`courses_recommended_filter_button ${chosenCourseCategory === category.code ? "cousres_recommended_chosen_filter" : ""}`}>
-                        {category.category}
-                    </button>)}
+                {
+                    categories.map(category =>
+                        <button key={category.id}
+                            onClick={() => filterHandler(category.code)}
+                            className={`courses_recommended_filter_button ${chosenCourseCategory === category.code ? "cousres_recommended_chosen_filter" : ""}`}>
+                            {category.category}
+                        </button>)
+                }
             </div>
         </div>
         <div className="courses_recommended_courses_container">
-            {courses.map((course, index) => <div key={index} className="recommended_course_card">
-                <div className="recommended_course_card_hours">
-                    <img src="/icons/time_circul/Time_Circle.svg" alt="" />
-                    <p>{course.time}</p>
-                </div>
-                <img src={course.imgSrc} className="recommended_course_card_img" alt="" />
-                <div className="recommended_course_card_details">
-                    <h1>{course.title}</h1>
-                    <div className="recommended_course_card_students_and_rating">
-                        <p>{course.students} طالب</p>
-                        <div className="recommended_course_card_rating_container">
-                            <p>{course.rating}</p>
-                            <img src="/icons/star/small_star_filled.svg" alt="" />
+            {
+                courses.map((course, index) =>
+                    <div key={index} className="recommended_course_card">
+                        <div className="recommended_course_card_hours">
+                            <img src="/icons/time_circul/Time_Circle.svg" alt="" />
+                            <p>{course.time}</p>
                         </div>
-                    </div>
-                    <button className="recommended_course_card_view_course_btn">
-                        <img src="/icons/arrows/small_right_arrow.svg" alt="" />
-                        <p>عرض الكورس</p>
-                    </button>
-                </div>
-            </div>)}
+                        <img src={course.imgSrc} className="recommended_course_card_img" alt="" />
+                        <div className="recommended_course_card_details">
+                            <h1>{course.title}</h1>
+                            <div className="recommended_course_card_students_and_rating">
+                                <p>{course.students} طالب</p>
+                                <div className="recommended_course_card_rating_container">
+                                    <p>{course.rating}</p>
+                                    <img src="/icons/star/small_star_filled.svg" alt="" />
+                                </div>
+                            </div>
+                            <button className="recommended_course_card_view_course_btn">
+                                <SmallRightArrowIcon />
+                                <p>عرض الكورس</p>
+                            </button>
+                        </div>
+                    </div>)
+            }
         </div>
-        <Link className="courses_recommended_view_all_btn">عرض جميع الكورسات</Link>
+        <Link className="courses_recommended_view_all_btn">
+            عرض جميع الكورسات
+        </Link>
     </div>
 };
 export default CoursesRecommended;

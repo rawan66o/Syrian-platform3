@@ -54,14 +54,17 @@ const WhyUs = () => {
                 <p className="why_us_header_p_p">المنصّة الوزاريّة التعليميّة هي بوابة رقمية شاملة تهدف إلى دعم التعليم في سوريا  تجمع المنصّة بين التقنيات الحديثة والمحتوى المحلي لتسهيل الوصول إلى المعرفة في أي وقت ومكان.</p>
             </div>
             <div className="why_us_platform_offers">
-                {platformOffers.map(offer => <div key={offer.id} className="why_us_offer">
-                    <div className="why_us_offer_header">
-                        <div className="why_us_icon_container"><img src={offer.icon} alt="" /></div>
-                        <img src="/icons/arrows/top_left_arrow.svg" alt="" />
-                    </div>
-                    <h1>{offer.title}</h1>
-                    <p>{offer.description}</p>
-                </div>)}
+                {
+                    platformOffers.map(offer =>
+                        <div key={offer.id} className="why_us_offer">
+                            <div className="why_us_offer_header">
+                                <div className="why_us_icon_container"><img src={offer.icon} alt="" /></div>
+                                <img src="/icons/arrows/top_left_arrow.svg" alt="" />
+                            </div>
+                            <h1>{offer.title}</h1>
+                            <p>{offer.description}</p>
+                        </div>)
+                }
             </div>
         </div>
     </div>

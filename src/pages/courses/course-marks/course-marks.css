@@ -3,8 +3,26 @@
   margin: 0;
   padding: 0 100px;
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   margin-top: 32px;
+  display: grid;
+  grid-template-columns: 410px 1fr;
+  grid-template-rows: auto;
+  gap: 40px;
+}
+@media (max-width: 1440px) {
+  .marks_page {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1023px) {
+  .marks_page {
+    padding: 0 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+@media (max-width: 767px) {
+  .marks_page {
+    padding: 0 10px;
+  }
 }

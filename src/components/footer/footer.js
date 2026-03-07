@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="platform_description">
                 <img className="footer_logo" src='/icons/syrian_platform_icon/syrian_platform_footer.svg' alt="" />
                 <p className="footer_p">
-                    المنصّة الوزاريّة التعليميّة هي بوابة رقمية شاملة تهدف  تجمع المنصّة بين التقنيات الحديثة والمحتوى المحلي لتسهيل الوصول إلى المعرفة في أي وقتمكان.المنصّة الوزاريّةشاملة تهدف .
+                    المنصّة الوزاريّة التعليميّة هي بوابة رقمية شاملة تهدف  تجمع المنصّة بين التقنيات الحديثة والمحتوى المحلي لتسهيل الوصول إلى المعرفة في أي وقت ومكان .
                 </p>
             </div>
             <div className="footer_section">

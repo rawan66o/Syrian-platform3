@@ -42,7 +42,7 @@ const CourseLessons = () => {
 
     const lessonInfo = {
         title: "كيف تعرف عن نفسك بالانجليزية",
-        lessonType: "pdf",
+        lessonType: "video",
         videoSrc: "/videos/experimental_vid/1.mp4",
         pdfSrc: "/pdf/1.pdf"
     };

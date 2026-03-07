@@ -8,6 +8,7 @@ const TestResults = ({ testResults }) => {
     const faintResultColor = testResults.result === "passed" ? "#34c7591a" : "#EC26251A";
     const resultColor = testResults.result === "passed" ? "#34C759" : "#EC2625";
     const result = testResults.result === "passed" ? "ناجح" : "راسب";
+
     return <div className="test_result">
         <div className="result_upper_header">
             <CirculStyleBig />
@@ -24,11 +25,16 @@ const TestResults = ({ testResults }) => {
                 </p>
                 <p className="questions_solved">نتيجة الاختبار {testResults.rightQuestionsNum} / {testResults.questionsNum}</p>
             </div>
-            {testResults.result === "failed" && <button className="redo_test_button">اعادة الاختبار</button>}
+            {
+                testResults.result === "failed" &&
+                <button className="redo_test_button">اعادة الاختبار</button>
+            }
         </div>
         <div className="test_questions_corrections">
-            {testResults.questions.map(question => <QuestionTestResults key={question.id} question={question} />
-            )}
+            {
+                testResults.questions.map(question =>
+                    <QuestionTestResults key={question.id} question={question} />)
+            }
             <WasHelpfulFeedBack feedBackHelpFulPercentage={testResults.feedbackHelpfulPercentage} />
         </div>
 

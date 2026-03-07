@@ -665,7 +665,8 @@ const Courses = () => {
 
     const total = courses.length
 
-    const { currentPage, setCurrentPage, pages, totalPages } = usePagination({ total, pageSize: 9 });
+    const { currentPage, setCurrentPage, pages, totalPages } =
+        usePagination({ total, pageSize: 9 });
 
     const lastCourse = currentPage * 9;
     const firstCourse = lastCourse - 9;
@@ -730,12 +731,14 @@ const Courses = () => {
                 <div className="courses_sidebar">
                     <h1>التصنيفات</h1>
                     <ul className="courses_categories">
-                        {categories.map(cat => <li
-                            key={cat.id}
-                            onClick={() => { setchosenCategory(cat.code) }}
-                            className={`courses_categories_li ${chosenCategory === cat.code ? "courses_chosen_category" : ""}`}>
-                            {cat.category}
-                        </li>)}
+                        {
+                            categories.map(cat => <li
+                                key={cat.id}
+                                onClick={() => { setchosenCategory(cat.code) }}
+                                className={`courses_categories_li ${chosenCategory === cat.code ? "courses_chosen_category" : ""}`}>
+                                {cat.category}
+                            </li>)
+                        }
                     </ul>
                 </div>
             </div>
@@ -765,15 +768,17 @@ const Courses = () => {
                     </div>
                 </div>
                 <div className="courses_cards">
-                    {courses.slice(firstCourse, lastCourse).map((course, index) =>
-                        <CourseCard
-                            key={course.id}
-                            imgSrc={course.imgSrc}
-                            time={course.time}
-                            title={course.title}
-                            students={course.students}
-                            rating={course.rating}
-                        />)}
+                    {
+                        courses.slice(firstCourse, lastCourse).map((course, index) =>
+                            <CourseCard
+                                key={course.id}
+                                imgSrc={course.imgSrc}
+                                time={course.time}
+                                title={course.title}
+                                students={course.students}
+                                rating={course.rating}
+                            />)
+                    }
                 </div>
                 <div className="courses_pagination_container">
                     <button className="courses_pagination_btn" onClick={handleNext}>

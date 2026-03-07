@@ -1,5 +1,5 @@
 .test_result {
-  min-width: 806px;
+  max-width: 806px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -22,7 +22,7 @@
   color: #232323;
 }
 .result_container {
-  min-width: 474px;
+  max-width: 474px;
   min-height: 157px;
   display: flex;
   justify-content: space-between;
@@ -90,4 +90,15 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
+}
+@media (max-width: 1023px) {
+  .test_result {
+    margin-bottom: 20px;
+    grid-row-start: 1;
+  }
+}
+@media (max-width: 767px) {
+  .test_result_title {
+    font-size: 24px;
+  }
 }
