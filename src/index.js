@@ -138,7 +138,7 @@ root.render(
                 <Route path="forum/:projectId" element={<PostPost />} />
               </Route>
               <Route element={<FormLayout />}>
-                <Route path="forum" element={<Forum />} /> ///
+                <Route path="forum" element={<Forum />} /> 
                 <Route path="project-application/:projectId" element={<ApplicationForMembership />} />
                 <Route path="add-project" element={<AddProject />} />
               </Route>
