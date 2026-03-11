@@ -6,6 +6,7 @@
   border-top-width: 0.5px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
 }
 .was_helpful {

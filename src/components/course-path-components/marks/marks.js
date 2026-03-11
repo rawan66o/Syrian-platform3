@@ -34,27 +34,30 @@ const Marks = ({ marksInfo }) => {
         </div>
         <div className="marks_tests_info_container">
             <div className="marks_tests_info">
-                {marksInfo.tests.map(test => <div key={test.id} className="marks_test_info">
-                    <div className="marks_test_title">
-                        <img src="/icons/reciept_icon/receipt_icon.svg" alt="" />
-                        <p>{test.title}</p>
-                    </div>
-                    <div className="marks_tests_statistics">
-                        <div className="marks_tests_statistics_statistic">
-                            <p className="marks_tests_statistics_percentage">{test.numOfTrys}</p>
-                            <p className="marks_tests_statistics_statistic_title">عدد المحاولات</p>
-                        </div>
-                        <div className="marks_tests_statistics_statistic">
-                            <p className="marks_tests_statistics_percentage">{test.successPercentage}%</p>
-                            <p className="marks_tests_statistics_statistic_title">نسبة النجاح</p>
-                        </div>
-                        <div className="marks_tests_statistics_statistic">
-                            <p className="marks_tests_statistics_percentage_last">{test.resultPercentage}%</p>
-                            <p className="marks_tests_statistics_statistic_title">(العلامة)</p>
-                        </div>
-                    </div>
-                    <div className="result_container_text " style={{ backgroundColor: `${test.result === "passed" ? "#34C759" : "#EC2625"}` }}>{test.result === "passed" ? "ناجح" : "راسب"}</div>
-                </div>)}
+                {
+                    marksInfo.tests.map(test =>
+                        <div key={test.id} className="marks_test_info">
+                            <div className="marks_test_title">
+                                <img src="/icons/reciept_icon/receipt_icon.svg" alt="" />
+                                <p>{test.title}</p>
+                            </div>
+                            <div className="marks_tests_statistics">
+                                <div className="marks_tests_statistics_statistic">
+                                    <p className="marks_tests_statistics_percentage">{test.numOfTrys}</p>
+                                    <p className="marks_tests_statistics_statistic_title">عدد المحاولات</p>
+                                </div>
+                                <div className="marks_tests_statistics_statistic">
+                                    <p className="marks_tests_statistics_percentage">{test.successPercentage}%</p>
+                                    <p className="marks_tests_statistics_statistic_title">نسبة النجاح</p>
+                                </div>
+                                <div className="marks_tests_statistics_statistic">
+                                    <p className="marks_tests_statistics_percentage_last">{test.resultPercentage}%</p>
+                                    <p className="marks_tests_statistics_statistic_title">(العلامة)</p>
+                                </div>
+                            </div>
+                            <div className="result_container_text " style={{ backgroundColor: `${test.result === "passed" ? "#34C759" : "#EC2625"}` }}>{test.result === "passed" ? "ناجح" : "راسب"}</div>
+                        </div>)
+                }
             </div>
             <WasHelpfulFeedBack feedBackHelpFulPercentage={marksInfo.feedbackHelpfulPercentage} />
         </div>

@@ -17,10 +17,13 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-radius: 8px;
   background-color: white;
   cursor: pointer;
   border: none;
+  gap: 12px;
+  height: 58.6px;
 }
 .level_title_full {
   font-weight: 500;
@@ -47,6 +50,9 @@
   gap: 8px;
   border: 1px solid #d9e4e5;
   animation: Opacity 0.4s ease-in-out;
+}
+.level_lesson_arrow_width {
+  width: 16px;
 }
 @keyframes Opacity {
   0% {

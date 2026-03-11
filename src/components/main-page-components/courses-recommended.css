@@ -25,16 +25,8 @@
   align-items: center;
   gap: 32px;
 }
-.courses_recommended h1 {
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 0px;
-  letter-spacing: 0px;
-  text-align: center;
-  vertical-align: middle;
-  color: #072127;
-}
-.courses_recommended h2 {
+.courses_recommended_h2 {
+  width: 100%;
   font-weight: 700;
   font-size: 24px;
   line-height: 100%;
@@ -42,12 +34,24 @@
   text-align: center;
   color: #6dcde5;
 }
+
+.courses_recommended_h1 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #072127;
+}
+
 .courses_recommended_filter_container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .courses_recommended_filter_button {
   width: 146.958984375px;
@@ -77,8 +81,10 @@
 .courses_recommended_courses_container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
 .recommended_course_card {
@@ -186,8 +192,12 @@
   color: #072127;
   background-color: #fff;
   cursor: pointer;
+  transition: all 0.3s ease-in;
 }
-
+.recommended_course_card_view_course_btn:hover {
+  color: #fff;
+  background-color: #306b89;
+}
 .courses_recommended_view_all_btn {
   width: 239px;
   height: 56px;
@@ -201,4 +211,49 @@
   color: #ffffff;
   text-decoration: none;
   align-content: center;
+  transition: 0.3s all ease-out;
+}
+.courses_recommended_view_all_btn:hover {
+  background-color: #072127;
+}
+@media (max-width: 1440px) {
+  .courses_recommended_container {
+    padding: 52px 60px;
+  }
+  .courses_recommended_h2 {
+    font-size: 22px;
+  }
+  .courses_recommended_h1 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 1023px) {
+  .courses_recommended_container {
+    padding: 52px 50px;
+  }
+  .courses_recommended_h2 {
+    font-size: 20px;
+  }
+  .courses_recommended_h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .courses_recommended_container {
+    padding: 52px 10px;
+  }
+  .courses_recommended_h2 {
+    font-size: 18px;
+  }
+  .courses_recommended_h1 {
+    font-size: 26px;
+  }
+  .recommended_course_card {
+    width: 320px;
+    height: 380px;
+  }
+  .recommended_course_card_details h1 {
+    font-weight: 600;
+    font-size: 18px;
+  }
 }

@@ -45,3 +45,19 @@
 .course_details_description_show_more_button:hover {
   background-color: #ddd;
 }
+@media (max-width: 1440px) {
+  .course_details_description_container {
+    max-width: 600px;
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1023px) {
+  .course_details_description_container {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 767px) {
+  .course_details_description_container {
+    padding: 0 10px;
+  }
+}

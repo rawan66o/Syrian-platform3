@@ -127,3 +127,8 @@
   vertical-align: middle;
   color: #708387;
 }
+@media (max-width: 767px) {
+  .add_course_step_four {
+    margin-top: 120px;
+  }
+}

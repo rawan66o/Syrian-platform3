@@ -72,4 +72,57 @@
   letter-spacing: 0px;
   color: #ffffff;
   cursor: pointer;
+  transition: 0.3s all ease-out;
+}
+.main_page_search_btn_m:hover {
+  background-color: #50c7e4;
+}
+@media (max-width: 1440px) {
+  .main_page_search_container_m {
+    width: 980px;
+  }
+  .main_page_search_container_m h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1023px) {
+  .main_page_search_container_m {
+    width: 90%;
+  }
+  .main_page_search_container_m h1 {
+    font-size: 26px;
+  }
+  .main_page_search_input_m {
+    font-size: 18px;
+  }
+  .main_page_search_input_m::placeholder {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .main_page_search_container_m {
+    width: 96%;
+    padding: 36px 8px 44px 8px;
+  }
+  .main_page_search_container_m h1 {
+    width: 100%;
+    font-size: 18px;
+  }
+  .main_page_search_input_container_m img {
+    right: 16px;
+  }
+  .main_page_search_input_m {
+    font-size: 16px;
+    padding-left: 95px;
+    padding-right: 44px;
+  }
+  .main_page_search_input_m::placeholder {
+    font-size: 16px;
+  }
+  .main_page_search_btn_m {
+    width: 90px;
+    font-weight: 500;
+    font-size: 16px;
+    left: 16px;
+  }
 }

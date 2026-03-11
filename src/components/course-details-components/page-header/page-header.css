@@ -48,3 +48,21 @@
   letter-spacing: 0px;
   text-align: right;
 }
+@media (max-width: 1440px) {
+  .inside_container {
+    padding: 50px 60px;
+  }
+  .content_container {
+    max-width: 500px;
+  }
+}
+@media (max-width: 1023px) {
+  .inside_container {
+    padding: 50px 50px;
+  }
+}
+@media (max-width: 767px) {
+  .inside_container {
+    padding: 50px 10px;
+  }
+}

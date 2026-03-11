@@ -1,9 +1,7 @@
 .bottom_bar {
   position: absolute;
   bottom: 0;
-  width: 99.5vw;
-  right: 50%;
-  margin-right: -50vw;
+  width: 100%;
   box-shadow: 0 -2px 37.4px 0 #0000001a;
   height: 89px;
   padding: 16.5px 0 16.5px 100px;
@@ -42,4 +40,17 @@
   letter-spacing: -2%;
   text-align: center;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .bottom_bar {
+    padding: 16.5px 0 16.5px 30px;
+  }
+  .next {
+    width: 180px;
+    font-size: 16px;
+  }
+  .previous {
+    width: 100px;
+    font-size: 16px;
+  }
 }

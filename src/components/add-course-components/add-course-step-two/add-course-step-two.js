@@ -266,14 +266,15 @@ const AddCourseStepTwo = () => {
         console.log(state);
     }, [state]);
     return <div className="add_course_step_two_container">
-        {levels.map(level =>
-            <AddCourseLevelContainer key={level.id}
-                levelNum={level.levelNum}
-                unitId={level.id}
-                state={state}
-                dispatch={dispatch}
-            />
-        )}
+        {
+            levels.map(level =>
+                <AddCourseLevelContainer key={level.id}
+                    levelNum={level.levelNum}
+                    unitId={level.id}
+                    state={state}
+                    dispatch={dispatch}
+                />)
+        }
         <div className="add_course_step_two_add_level_container">
             <h1 className="add_course_step_two_add_level_header">اضافة وحدة علمية</h1>
             <button className="add_course_step_two_add_level_button" onClick={addLevelHandler}>

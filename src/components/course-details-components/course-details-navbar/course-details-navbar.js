@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import "./course-details-navbar.css";
 import { NavLink } from "react-router";
 import { useLocation } from "react-router";
+import { MenuIcon } from "../../icons/nav-menu-icons/nav-menu-icons";
 const CourseDetailsNavBar = () => {
     const location = useLocation();
     const loggedIn = true;
@@ -23,52 +25,66 @@ const CourseDetailsNavBar = () => {
         "/dashboard/my-progects",
     ];
 
+    const [menuOpen, setMenuOpen] = useState(false);
 
+    useEffect(() => {
+        const closeMenu = () => {
+            setMenuOpen(false);
+        };
+        closeMenu();
+    }, [location.pathname]);
+
+    const menu = <div className={`nav_links_to_pages ${menuOpen ? "menu_nav_links" : ""}`}>
+        <NavLink
+            className={({ isActive }) => {
+                return isActive ? "clicked_nav_link" : "course_nav_link";
+            }}
+            to="/" >
+            الرئيسية
+        </NavLink>
+        <NavLink
+            className={({ isActive }) => {
+                return isActive ? "clicked_nav_link" : "course_nav_link";
+            }}
+            to="/courses">
+            الكورسات
+        </NavLink>
+        <NavLink
+            className={({ isActive }) => {
+                return isActive ? "clicked_nav_link" : "course_nav_link";
+            }}
+            to="/forum"
+        >
+            المنتدى
+        </NavLink>
+        <NavLink
+            className={({ isActive }) => {
+                return isActive ? "clicked_nav_link" : "course_nav_link";
+            }}
+            to="/projects">
+            المشاريع
+        </NavLink>
+        <NavLink
+            className={({ isActive }) => {
+                return isActive ? "clicked_nav_link" : "course_nav_link";
+            }}
+            to="/contact-us">
+            اتصل بنا
+        </NavLink>
+    </div>;
 
     if (fullNavPaths.includes(location.pathname) || testPath(location.pathname)) {
         return <div className="course_details_navbar">
+            <div className={`backdrop_nav ${menuOpen ? "backdrop_nav_show" : ""}`}
+                onClick={() => { setMenuOpen(false) }}
+            />
             <div className="nav_body" dir="rtl">
                 <div className="nav_body_icon_links">
                     <img src="/icons/syrian_platform_icon/sp.jpeg" className="sp_logo_class" alt="" />
                     <div className="nav_separation_line" />
-                    <div className="nav_links_to_pages">
-                        <NavLink
-                            className={({ isActive }) => {
-                                return isActive ? "clicked_nav_link" : "course_nav_link";
-                            }}
-                            to="/" >
-                            الرئيسية
-                        </NavLink>
-                        <NavLink
-                            className={({ isActive }) => {
-                                return isActive ? "clicked_nav_link" : "course_nav_link";
-                            }}
-                            to="/courses">
-                            الكورسات
-                        </NavLink>
-                        <NavLink
-                            className={({ isActive }) => {
-                                return isActive ? "clicked_nav_link" : "course_nav_link";
-                            }}
-                            to="/forum"
-                        >
-                            المنتدى
-                        </NavLink>
-                        <NavLink
-                            className={({ isActive }) => {
-                                return isActive ? "clicked_nav_link" : "course_nav_link";
-                            }}
-                            to="/projects">
-                            المشاريع
-                        </NavLink>
-                        <NavLink
-                            className={({ isActive }) => {
-                                return isActive ? "clicked_nav_link" : "course_nav_link";
-                            }}
-                            to="/contact-us">
-                            اتصل بنا
-                        </NavLink>
-                    </div>
+                    {
+                        menu
+                    }
                 </div>
                 <div className="course_details_navbar_search_container">
                     <input className="course_details_nav_search_input" type="search" placeholder="البحث" />
@@ -85,12 +101,22 @@ const CourseDetailsNavBar = () => {
                     </div>
                     <div className="nav_separation_line" />
                     <div className="signup_button_container">
-                        {!loggedIn && <button className="signup_button">تسجيل الدخول</button>}
-                        {loggedIn && <div className="navbar_user_container">
-                            <img src="/images/nav_user/nav_user.png" alt="" />
-                            <p className="navbar_user_container_username">المدرب.محمد الشيخ</p>
-                        </div>}
+                        {
+                            !loggedIn &&
+                            <button className="signup_button">
+                                تسجيل الدخول
+                            </button>}
+                        {
+                            loggedIn &&
+                            <div className="navbar_user_container">
+                                <img src="/images/nav_user/nav_user.png" alt="" />
+                                <p className="navbar_user_container_username">المدرب.محمد الشيخ</p>
+                            </div>
+                        }
                     </div>
+                    <button onClick={() => { setMenuOpen(true) }} className="menu_open_btn">
+                        <MenuIcon />
+                    </button>
                 </div>
             </div>
         </div>
@@ -116,11 +142,18 @@ const CourseDetailsNavBar = () => {
                     </div>
                     <div className="nav_separation_line" />
                     <div className="signup_button_container">
-                        {!loggedIn && <button className="signup_button">تسجيل الدخول</button>}
-                        {loggedIn && <div className="navbar_user_container">
-                            <img src="/images/nav_user/nav_user.png" alt="" />
-                            <p className="navbar_user_container_username">المدرب.محمد الشيخ</p>
-                        </div>}
+                        {
+                            !loggedIn &&
+                            <button className="signup_button">
+                                تسجيل الدخول
+                            </button>}
+                        {
+                            loggedIn &&
+                            <div className="navbar_user_container">
+                                <img src="/images/nav_user/nav_user.png" alt="" />
+                                <p className="navbar_user_container_username">المدرب.محمد الشيخ</p>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>

@@ -5,6 +5,8 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 100px;
+  gap: 40px;
+  margin-bottom: 50px;
 }
 .courses_sidebar_container {
   width: 100%;
@@ -78,6 +80,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  row-gap: 20px;
 }
 .courses_container_header_title_and_order {
   display: flex;
@@ -216,4 +221,43 @@
 .courses_page_stepper_style:hover {
   background-color: none;
   background: none;
+}
+@media (max-width: 1440px) {
+  .courses_page_container {
+    padding: 0 40px;
+  }
+  .courses_sidebar_container {
+    margin-right: -40px;
+  }
+}
+@media (max-width: 767px) {
+  .courses_page_container {
+    padding: 0 0;
+    flex-direction: column;
+  }
+  .courses_sidebar_container {
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    padding: 40px 24px 32px 24px;
+    background-color: #f9f9f9;
+  }
+  .courses_categories {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .courses_categories_li {
+    width: 48%;
+  }
+  .courses_container {
+    padding: 0 10px;
+  }
+  .courses_search_input_container {
+    width: 100%;
+  }
+  .courses_search_input {
+    width: 100%;
+  }
 }

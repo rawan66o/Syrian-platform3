@@ -7,7 +7,9 @@ const CourseCertificateModal = ({ close }) => {
     return <>
         <BackDrop onClick={close} />
         <div className="course_certificate_modal">
-            <img src="/images/empty_certificate/empty_certificate.svg" width={460} alt="" />
+            <img src="/images/empty_certificate/empty_certificate.svg"
+                className="course_certificate_modal_image"
+                alt="" />
         </div>
     </>
 };

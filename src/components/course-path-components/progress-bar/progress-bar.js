@@ -73,7 +73,10 @@ const ProgressBar = ({ course }) => {
                         index={levelNameMap[index]} />)
             }
         </div>
-        {showModal && ReactDOM.createPortal(<RateCourseModal close={hideModal} value={rating} />, document.getElementById("ratemodal-root"))}
+        {
+            showModal &&
+            ReactDOM.createPortal(<RateCourseModal close={hideModal} value={rating} />, document.getElementById("ratemodal-root"))
+        }
     </div>
 };
 export default ProgressBar;
