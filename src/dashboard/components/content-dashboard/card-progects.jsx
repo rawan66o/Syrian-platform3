@@ -24,11 +24,20 @@ function Card({ data }) {
       {/* SECTION DATE */}
       <div className="card-flex-center">
         <div className="volunteers-section-card">
-          <AvatarGroup total={22} max={3}>
-            <Avatar alt="متطوع 1" src='/images/logo/1.jpg' />
-            <Avatar alt="متطوع 2" src='/images/logo/2.jpg' />
-            <Avatar alt="متطوع 3" src='/images/logo/3.jpg' />
-          </AvatarGroup>
+          <div className="avatar-group overlap">
+            <div className="avatar">
+              <img src='/images/logo/1.jpg' alt="متطوع 1" />
+            </div>
+            <div className="avatar">
+              <img src='/images/logo/2.jpg' alt="متطوع 2" />
+            </div>
+            <div className="avatar">
+              <img src='/images/logo/3.jpg' alt="متطوع 3" />
+            </div>
+            <div className="avatar-more">
+              +22
+            </div>
+          </div>
           <h6>22</h6>
           <p>متطوع</p>
         </div>

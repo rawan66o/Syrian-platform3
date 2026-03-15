@@ -4,7 +4,7 @@ import SidebarMobile from '../../components/sidebar-dashboard/sidebar-mobile';
 import SidebarDashboard from '../../components/sidebar-dashboard/sidebar-dashboard'
 import Footer from '../../../components/footer/footer'
 import { Outlet } from 'react-router-dom'
-import './dashboard-layout.css';
+import style from './dashboard-layout.module.css';
 
 function DashboardLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -31,8 +31,8 @@ function DashboardLayout() {
   };
 
   return (
-    <div className="layout-dashboard">
-      <div className='dashboard-navbar'>
+    <div className={style.layout_dashboard}>
+      <div className={style.dashboard_navbar}>
         <Navbar 
           isMobile={isMobile}
           onToggleSidebar={toggleSidebar}
@@ -40,27 +40,29 @@ function DashboardLayout() {
         />
       </div>
       
-      {/* سايدبار سطح المكتب */}
-      {!isMobile && (
-        <div className="layout-dashboard-sidebar">
-          <SidebarDashboard 
-            isOpen={true} 
-            onClose={() => {}} 
-          />
-        </div>
-      )}
+      <div className={style.dashboard_main}>
+        {/* سايدبار سطح المكتب */}
+        {!isMobile && (
+          <div className={style.layout_dashboard_sidebar}>
+            <SidebarDashboard 
+              isOpen={true} 
+              onClose={() => {}} 
+            />
+          </div>
+        )}
 
-      {/* سايدبار الموبايل */}
-      {isMobile && (
-        <SidebarMobile 
-          isOpen={isSidebarOpen}
-          onClose={closeSidebar}
-        />
-      )}
-      
-      {/* المحتوى الرئيسي */}
-      <div className="layout-dashboard-content">
-        <Outlet />
+        {/* سايدبار الموبايل */}
+        {isMobile && (
+          <SidebarMobile 
+            isOpen={isSidebarOpen}
+            onClose={closeSidebar}
+          />
+        )}
+
+        {/* المحتوى الرئيسي */}
+        <div className={style.layout_dashboard_content}>
+          <Outlet />
+        </div>
       </div>
       
       <Footer />

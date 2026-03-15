@@ -1,4 +1,3 @@
-/* CSS Styles */
 .layout-pro {
   direction: rtl;
   display: flex;
@@ -137,6 +136,65 @@
   flex: 1;
   justify-content: flex-start;
 }
+.avatar-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  direction: rtl; 
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.avatar-more {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #6DCDE5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-group.overlap {
+  display: flex;
+  align-items: center;
+  direction: rtl;
+}
+
+.avatar-group.overlap .avatar,
+.avatar-group.overlap .avatar-more {
+  margin-right: -30px; /* قيمة التداخل */
+  border: 2px solid white;
+  transition: transform 0.2s ease;
+}
+
+.avatar-group.overlap .avatar:hover,
+.avatar-group.overlap .avatar-more:hover {
+  transform: translateY(-3px);
+  z-index: 10;
+}
+
+/* أول Avatar لا يحتاج مسافة من اليمين */
+.avatar-group.overlap .avatar:first-child {
+  margin-right: 0;
+}
 
 .volunteers-section-card p {
   font-weight: 500;
@@ -221,7 +279,7 @@
 
 /* MUI Avatar Styles */
 .MuiAvatarGroup-root {
-  direction: ltr;
+  direction: rtl;
 }
 
 .MuiAvatar-root {
