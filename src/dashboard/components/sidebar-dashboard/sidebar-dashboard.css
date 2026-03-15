@@ -1,5 +1,5 @@
 .sidebar-container {
-    width: 100%;
+    /* width: 100%; */
     padding: 40px 60px 32px 24px;
     height: 100vh;
     background: var(--background-cards, #F9F9F9);
@@ -19,8 +19,14 @@
 }
 
 .sidebar-mobile-content{
-    position: absolute;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 20px;
     width: 500px;
+    height: 100vh;
     background: white;
 }
 

@@ -22,7 +22,7 @@ const Navbar = ({ isMobile, onToggleSidebar, isSidebarOpen }) => {
         <img className='icon-logo' alt='' src="/images/logo/spLogo12.png" />
         <div className='divid' />
         {menuItems.map((item) => (
-          <h6
+          <h6 className='items'
             key={item}
             style={{
               cursor: 'pointer',
@@ -62,18 +62,11 @@ const Navbar = ({ isMobile, onToggleSidebar, isSidebarOpen }) => {
         </div>
 
         {isMobile && (
-          <div 
+          <div btn_notification
             className={`btn_notification menu-btn ${isSidebarOpen ? 'active' : ''}`} 
             onClick={onToggleSidebar}  // فقط نستخدم الدالة من props
           >
-            <img 
-              className='lang_images' 
-              src={isSidebarOpen 
-                ? '/images/icons/dashboard/close.png'     // أيقونة إغلاق (X)
-                : '/images/icons/dashboard/nav-icon.svg'  // أيقونة قائمة
-              }
-              alt={isSidebarOpen ? 'إغلاق' : 'قائمة'}
-            />
+            {isSidebarOpen ? '✕' : '☰'}
           </div>
         )}
 
