@@ -62,18 +62,11 @@ const Navbar = ({ isMobile, onToggleSidebar, isSidebarOpen }) => {
         </div>
 
         {isMobile && (
-          <div 
+          <div btn_notification
             className={`btn_notification menu-btn ${isSidebarOpen ? 'active' : ''}`} 
             onClick={onToggleSidebar}  // فقط نستخدم الدالة من props
           >
-            <img 
-              className='lang_images' 
-              src={isSidebarOpen 
-                ? '/images/icons/dashboard/close.png'     // أيقونة إغلاق (X)
-                : '/images/icons/dashboard/nav-icon.svg'  // أيقونة قائمة
-              }
-              alt={isSidebarOpen ? 'إغلاق' : 'قائمة'}
-            />
+            {isSidebarOpen ? '✕' : '☰'}
           </div>
         )}
 

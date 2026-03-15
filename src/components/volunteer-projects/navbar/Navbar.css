@@ -88,6 +88,12 @@
     background: #e0e0e0;
 }
 
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .not_image {
     width: 24px;
     height: 24px;
