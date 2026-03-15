@@ -22,7 +22,7 @@ const Navbar = ({ isMobile, onToggleSidebar, isSidebarOpen }) => {
         <img className='icon-logo' alt='' src="/images/logo/spLogo12.png" />
         <div className='divid' />
         {menuItems.map((item) => (
-          <h6
+          <h6 className='items'
             key={item}
             style={{
               cursor: 'pointer',

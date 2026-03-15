@@ -78,7 +78,7 @@ function SidebarMobile({ isOpen, onClose }) {
             <div className="sidebar-mobile-content">
                 {/* رأس السايدبار */}
                 <div className="sidebar-mobile-header">
-                    <button className="close-btn" onClick={onClose}>✕</button>
+                    {/* <button className="close-btn" onClick={onClose}>✕</button> */}
                     {/* <img className="sidebar-logo" src="/images/logo/spLogo12.png" alt="logo" /> */}
                 </div>
 

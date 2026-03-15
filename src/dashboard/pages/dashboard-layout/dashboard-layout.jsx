@@ -1,4 +1,3 @@
-// DashboardLayout.jsx
 import { useState, useEffect } from 'react';
 import Navbar from "../../../components/volunteer-projects/navbar/Navbar"
 import SidebarMobile from '../../components/sidebar-dashboard/sidebar-mobile';
@@ -15,7 +14,7 @@ function DashboardLayout() {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 992);
       if (window.innerWidth > 992) {
-        setIsSidebarOpen(false); // إغلاق السايدبار إذا كبرت الشاشة
+        setIsSidebarOpen(false);
       }
     };
 
@@ -32,37 +31,38 @@ function DashboardLayout() {
   };
 
   return (
-    <div className="dashboard-layout">
-      <Navbar 
-        isMobile={isMobile}
-        onToggleSidebar={toggleSidebar}
-        isSidebarOpen={isSidebarOpen}
-      />
-      
-      <div className="dashboard-container">
-        {/* سايدبار سطح المكتب (يظهر دائماً في الشاشات الكبيرة) */}
-        {!isMobile && (
-          <div className="desktop-sidebar-wrapper">
-            <SidebarDashboard 
-              isOpen={true} 
-              onClose={() => {}} 
-            />
-          </div>
-        )}
-
-        {isMobile && (
-          <SidebarMobile 
-            isOpen={isSidebarOpen}
-            onClose={closeSidebar}
-          />
-        )}
-        
-        {/* المحتوى الرئيسي */}
-        <div className={`main-content ${!isMobile ? 'with-sidebar' : ''}`}>
-          {/* هنا يظهر المحتوى الخاص بكل صفحة */}
-          <Outlet />
-        </div>
+    <div className="layout-dashboard">
+      <div className='dashboard-navbar'>
+        <Navbar 
+          isMobile={isMobile}
+          onToggleSidebar={toggleSidebar}
+          isSidebarOpen={isSidebarOpen}
+        />
       </div>
+      
+      {/* سايدبار سطح المكتب */}
+      {!isMobile && (
+        <div className="layout-dashboard-sidebar">
+          <SidebarDashboard 
+            isOpen={true} 
+            onClose={() => {}} 
+          />
+        </div>
+      )}
+
+      {/* سايدبار الموبايل */}
+      {isMobile && (
+        <SidebarMobile 
+          isOpen={isSidebarOpen}
+          onClose={closeSidebar}
+        />
+      )}
+      
+      {/* المحتوى الرئيسي */}
+      <div className="layout-dashboard-content">
+        <Outlet />
+      </div>
+      
       <Footer />
     </div>
   );
