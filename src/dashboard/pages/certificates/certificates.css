@@ -87,7 +87,7 @@
 }
 
 .button-certificates:hover {
-   transform: translateY(-2px);
+   /* transform: translateY(-2px); */
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -118,7 +118,7 @@
 .card-certificates:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   border-color: transparent;
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
 }
 
 .card-content-header {

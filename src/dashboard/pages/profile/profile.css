@@ -1,5 +1,3 @@
-/* profile.css */
-
 .flex-col-start {
    direction: rtl;
    display: flex;
@@ -138,6 +136,42 @@
 .flex-col-start button {
    font-family: inherit;
    font-size: inherit;
+}
+
+.flex-col-start .dropdown-menu {
+   top: 100%;
+   left: 0;
+   right: 0;
+   background: white;
+   border: 1px solid #D9E4E5;
+   border-radius: 8px;
+   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+   max-height: 300px;
+   overflow-y: auto;
+}
+
+.phone-dropdown {
+   /* position: absolute; */
+   top: 55px;
+   right: 0;
+   /* z-index: 9999 !important; */
+   background: #D9E4E5;
+   border: 1px solid #D9E4E5;
+   border-radius: 8px;
+   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+   max-height: 300px;
+   overflow-y: auto;
+   min-width: 250px;
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+   .phone-dropdown {
+      right: auto;
+      left: 0;
+      width: 100%;
+      min-width: 100%;
+   }
 }
 
 .certificate-link {

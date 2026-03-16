@@ -95,7 +95,7 @@ function Profile({ status = 'volunteer' }) {
         <div className='flex-row'>
           <div className="flex-col-start">
             <label><img src='/images/icons/dashboard/calendar.svg' alt="" /> تاريخ الميلاد</label>
-            <div style={{ position: 'relative', width: '100%' }}>
+            <div className="phone-input-container" style={{ width: '100%' }}>
               <DatePicker 
                 selected={formData.startDate}
                 onChange={(date) => setFormData(prev => ({ ...prev, startDate: date }))}
@@ -122,7 +122,7 @@ function Profile({ status = 'volunteer' }) {
           </div>
           <div className="flex-col-start">
             <label><img src="/images/icons/dashboard/call.svg" alt="" /> رقم الهاتف</label>
-            <div style={{ display: 'flex', alignItems: 'center', width: '100%', position: 'relative' }}>
+            <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
               {/* حقل إدخال الرقم */}
               <input
                 type="tel"
@@ -212,7 +212,7 @@ function Profile({ status = 'volunteer' }) {
               {/* القائمة المنسدلة للدول */}
               {isDropdownOpen && (
                 <div style={{
-                  position: 'absolute',
+                  // position: 'absolute',
                   top: '55px',
                   right: '240px',
                   width: '220px',
@@ -222,7 +222,7 @@ function Profile({ status = 'volunteer' }) {
                   border: '1px solid #D9E4E5',
                   borderRadius: '8px',
                   boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                  zIndex: 1000
+                  // zIndex: 1000
                 }}>
                   {/* <input
                     type="text"
@@ -317,7 +317,7 @@ function Profile({ status = 'volunteer' }) {
           </div>
           <div className="flex-col-start">
             <label>مكان الاقامة</label>
-            <div style={{ display: 'flex', alignItems: 'center', width: '100%', position: 'relative' }}>
+            <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
               {/* زر اختيار الدولة */}
               <button
                 type="button"
@@ -362,7 +362,7 @@ function Profile({ status = 'volunteer' }) {
               {/* القائمة المنسدلة للدول */}
               {isCountryDropdownOpen && (
                 <div style={{
-                  position: 'absolute',
+                  // position: 'absolute',
                   top: '60px',
                   left: '0',
                   width: '100%',
@@ -372,7 +372,7 @@ function Profile({ status = 'volunteer' }) {
                   border: '1px solid #D9E4E5',
                   borderRadius: '8px',
                   boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                  zIndex: 1000
+                  // zIndex: 1000
                 }}>
                   <input
                     type="text"
