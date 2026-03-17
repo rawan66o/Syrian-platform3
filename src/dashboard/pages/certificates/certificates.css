@@ -189,6 +189,20 @@
    }
 }
 
+@media (max-width : 992px) and (min-width: 767px) {
+   .certificates-grid {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+   }
+
+   .layout-certificates .card-flex-row{
+      flex-direction: column;
+   }
+
+   .card-flex-row .button-certificates{
+      width: 100%;
+   }
+}
+
 @media (max-width: 768px) {
    .layout-certificates-title {
       flex-direction: column;
@@ -200,7 +214,7 @@
       grid-template-columns: 1fr;
    }
    
-   .card-flex-row {
+   .layout-certificates .card-flex-row {
       flex-direction: column;
    }
    
