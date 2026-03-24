@@ -1,0 +1,522 @@
+/* profile.module.css */
+
+/* Container Styles */
+.container {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Layout Styles */
+.layoutForm {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.flexRow {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+
+.flexRow > .flexColStart {
+  flex: 1;
+}
+
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Label Styles */
+.label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  color: #072127;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Input Styles */
+.input,
+.select,
+.textarea {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #D9E4E5;
+  background: #FFFFFF;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #072127;
+  box-sizing: border-box;
+  outline: none;
+  text-align: right;
+}
+
+.select {
+  padding: 0 40px 0 15px;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+.textarea {
+  height: 115px;
+  padding: 12px 20px;
+  resize: none;
+}
+
+.input::placeholder,
+.textarea::placeholder,
+.select:invalid {
+  color: #708387;
+  font-weight: 500;
+}
+
+.input:hover,
+.select:hover,
+.textarea:hover,
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border: 1px solid #708387;
+  outline: none;
+}
+
+/* Phone Input Styles */
+.phoneContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* position: relative; */
+}
+
+.phoneInput {
+  flex: 1;
+  height: 48px;
+  border: 1px solid #70838766;
+  border-left: none;
+  border-radius: 0px 8px 8px 0px;
+  padding: 0 16px;
+  font-size: 16px;
+  outline: none;
+}
+
+.phoneButton {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid #70838766;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  background-color: white;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.phoneButtonContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prefixText {
+  font-size: 14px;
+  color: #000;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: #70838766;
+}
+
+.flagIcon {
+  width: 20px;
+  height: 15px;
+  border-radius: 3px;
+}
+
+.chevronIcon {
+  width: 12px;
+  height: 11px;
+  transition: transform 0.3s;
+}
+
+/* Date Input Styles */
+
+/* Calendar Popup Styles */
+.calendarContainer {
+  /* position: relative; */
+  width: 100%;
+}
+
+.calendarPopup {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #D9E4E5;
+  overflow: hidden;
+}
+
+/* react-datepicker */
+:global(.react-datepicker) {
+  font-family: inherit !important;
+  border: none !important;
+  border-radius: 12px !important;
+  background: white !important;
+}
+
+:global(.react-datepicker__header) {
+  background: #6DCDE5 !important;
+  border-bottom: none !important;
+  border-radius: 12px 12px 0 0 !important;
+  padding: 16px !important;
+}
+
+:global(.react-datepicker__current-month) {
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  margin-bottom: 8px !important;
+}
+
+:global(.react-datepicker__day-name) {
+  color: white !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  width: 36px !important;
+  margin: 2px !important;
+}
+
+:global(.react-datepicker__day) {
+  color: #072127 !important;
+  font-size: 14px !important;
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  margin: 2px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+:global(.react-datepicker__day:hover) {
+  background: #6DCDE533 !important;
+  color: #072127 !important;
+}
+
+:global(.react-datepicker__day--selected) {
+  background: #6DCDE5 !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+:global(.react-datepicker__day--keyboard-selected) {
+  background: #6DCDE533 !important;
+  color: #072127 !important;
+}
+
+:global(.react-datepicker__day--outside-month) {
+  color: #70838766 !important;
+}
+
+:global(.react-datepicker__navigation) {
+  top: 20px !important;
+}
+
+:global(.react-datepicker__navigation-icon::before) {
+  border-color: white !important;
+}
+
+:global(.react-datepicker__triangle) {
+  display: none !important;
+}
+
+:global(.react-datepicker__month) {
+  margin: 8px !important;
+  padding: 8px !important;
+}
+
+:global(.react-datepicker__week) {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+:global(.react-datepicker__day-names) {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 8px !important;
+}
+
+/* Calendar Button */
+.calendarButton {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.calendarButton:hover img {
+  opacity: 1;
+}
+
+.calendarButton img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+/* Custom Date Input */
+.customDateInput {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  border: 1px solid #D9E4E5;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #072127;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.customDateInput:focus {
+  border-color: #6DCDE5;
+  box-shadow: 0 0 0 3px rgba(109, 205, 229, 0.1);
+}
+
+.customDateInput::placeholder {
+  color: #708387;
+  font-weight: 500;
+}
+
+/* Arabic Calendar customization */
+:global(.react-datepicker__day-name):first-letter {
+  font-weight: 600;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #D9E4E5;
+  border: 1px solid #D9E4E5;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdownFull {
+  composes: dropdown;
+  width: 100%;
+  background-color: white;
+}
+
+.dropdownItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  text-align: right;
+  transition: background-color 0.2s;
+}
+
+.dropdownItem:hover {
+  background-color: rgba(109, 205, 229, 0.2);
+}
+
+.dropdownItemActive {
+  composes: dropdownItem;
+  background-color: #6DCDE5;
+}
+
+.dropdownItemActive:hover {
+  background-color: #5bb9d0;
+}
+
+.dropdownItemResidence {
+  composes: dropdownItem;
+  background-color: white;
+}
+
+.dropdownItemResidenceActive {
+  composes: dropdownItem;
+  background-color: #F0F9FF;
+}
+
+.dropdownItemContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+}
+
+.countryName {
+  font-weight: 500;
+}
+
+.countryPrefix {
+  font-size: 14px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* File Input Styles */
+.inputFile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 107px;
+  border-radius: 10px;
+  background: #6DCDE50D;
+  border: 1px solid #D9E4E5;
+  cursor: pointer;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.inputFileButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  background: #6DCDE51A;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.inputFileButton img {
+  width: 24px;
+  height: 24px;
+}
+
+.fileName {
+  color: #072127;
+}
+
+/* Typography Styles */
+.title {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 100%;
+  color: #072127;
+  margin: 0;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: #708387;
+  margin: 0;
+}
+
+.smallText {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Certificate Links */
+.certificateLink {
+  color: #6DCDE5;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.certificateLink:hover {
+  text-decoration: underline;
+  color: #6DCDE5;
+}
+
+/* Delete Button */
+.deleteButton {
+  width: 195px;
+  height: 52px;
+  border: 0px;
+  border-radius: 8px;
+  color: #708387;
+  background: #EC26251A;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.deleteButton:hover {
+  background: #EC262533;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .flexRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .layoutForm {
+    gap: 20px;
+  }
+
+  .dropdown {
+    left: auto;
+    right: 0;
+    width: 100%;
+    min-width: 100%;
+  }
+}

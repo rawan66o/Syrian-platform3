@@ -8,12 +8,6 @@ function SidebarMobile({ isOpen, onClose }) {
 
     const list = [
         {
-            name:'الصفحة الرئيسية',
-            logo:'/images/icons/dashboard/home/home.png',
-            logo2:'/images/icons/dashboard/home/home-active.png',
-            path: '/' 
-        },
-        {
             name:'لوحة التحكم',
             logo:'/images/icons/dashboard/category/category2.png',
             logo2:'/images/icons/dashboard/category/category.png',
