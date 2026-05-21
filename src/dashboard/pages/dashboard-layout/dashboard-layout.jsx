@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react';
-import Navbar from "../../../components/volunteer-projects/navbar/Navbar"
+import Navbar from "../../../components/volunteer-projects/navbar/Navbar";
 import SidebarMobile from '../../components/sidebar-dashboard/sidebar-mobile';
-import SidebarDashboard from '../../components/sidebar-dashboard/sidebar-dashboard'
-import Footer from '../../../components/footer/footer'
-import { Outlet } from 'react-router-dom'
+import SidebarDashboard from '../../components/sidebar-dashboard/sidebar-dashboard';
+import Footer from '../../../components/footer/footer';
+import { Outlet, useLocation } from 'react-router-dom';
 import style from './dashboard-layout.module.css';
 
 function DashboardLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 991);
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 992);
-      if (window.innerWidth > 992) {
+      const mobile = window.innerWidth <= 991;
+      setIsMobile(mobile);
+      if (!mobile) {
         setIsSidebarOpen(false);
       }
     };
@@ -21,6 +23,12 @@ function DashboardLayout() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  useEffect(() => {
+    if (isMobile) {
+      setIsSidebarOpen(false);
+    }
+  }, [location.pathname, isMobile]);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -41,7 +49,6 @@ function DashboardLayout() {
       </div>
       
       <div className={style.dashboard_main}>
-        {/* سايدبار سطح المكتب */}
         {!isMobile && (
           <div className={style.layout_dashboard_sidebar}>
             <SidebarDashboard 
@@ -51,7 +58,6 @@ function DashboardLayout() {
           </div>
         )}
 
-        {/* سايدبار الموبايل */}
         {isMobile && (
           <SidebarMobile 
             isOpen={isSidebarOpen}
@@ -59,13 +65,13 @@ function DashboardLayout() {
           />
         )}
 
-        {/* المحتوى الرئيسي */}
         <div className={style.layout_dashboard_content}>
           <Outlet />
         </div>
       </div>
-      
-      <Footer />
+      <div className={style.dashboard_footer}>
+        <Footer />
+      </div>
     </div>
   );
 }

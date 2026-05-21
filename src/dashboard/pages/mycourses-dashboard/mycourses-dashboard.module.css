@@ -1,0 +1,336 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 32px;
+}
+
+.layout h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  color: black;
+  margin: 0;
+}
+
+.sectionTitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  color: black;
+  margin: 0;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(463px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.cardCourse {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* max-width: 463px; */
+  height: auto;
+  min-height: 250px;
+  gap: 25px;
+  border-radius: 12px;
+  padding: 24px 20px;
+  border: 1px solid #D9E4E5;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.cardCourse:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+.cardContentHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cardContentHeader img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f0f0;
+}
+
+.cardContentHeader h5 {
+  margin: 0;
+  color: #072127;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cardFlexStart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardFlexStart h5 {
+  margin: 0;
+  color: #071722;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cardFlexRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.endCourse {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 20px;
+  width: 203.5px;
+  height: 52px;
+  border-radius: 8px;
+  border-bottom: 1px solid #072127;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.endCourse:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.endCourse h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #072127;
+  font-weight: 500;
+}
+
+.endBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 31px;
+  gap: 4px;
+  border-radius: 4px;
+  padding: 0px 16px;
+  color: #34C759;
+  background: #34C75914;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  color: #708387;
+  grid-column: 1 / -1;
+}
+
+.emptyState img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.emptyState h3 {
+  margin: 0 0 8px 0;
+  color: #072127;
+  font-size: 18px;
+}
+
+.emptyState p {
+  margin: 0;
+  color: #708387;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cardCourse {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@media (max-width: 1024px) {
+  .coursesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(463px, 1fr));
+  }
+  
+  .cardContentHeader h5 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coursesGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .cardCourse {
+    min-height: 230px;
+    gap: 20px;
+    padding: 10px 16px;
+    max-width: 100%;
+  }
+  
+  .cardContentHeader img {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .cardContentHeader h5 {
+    font-size: 18px;
+  }
+  
+  .layout h4,
+  .sectionTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .coursesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+  }
+  
+  .cardCourse {
+    min-height: 220px;
+    gap: 18px;
+    padding: 18px 14px;
+  }
+  
+  .cardContentHeader {
+    gap: 12px;
+  }
+  
+  .cardContentHeader img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .cardContentHeader h5 {
+    font-size: 17px;
+  }
+  
+  .cardFlexStart h5 {
+    font-size: 15px;
+  }
+  
+  .cardFlexRow {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coursesGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .cardCourse {
+    min-height: 210px;
+    max-width: 100%;
+    gap: 16px;
+    padding: 16px 12px;
+  }
+  
+  .cardContentHeader img {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .cardContentHeader h5 {
+    font-size: 16px;
+  }
+  
+  .cardFlexStart h5 {
+    font-size: 14px;
+  }
+  
+  .layout {
+    gap: 24px;
+  }
+  
+  .layout h4,
+  .sectionTitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .cardCourse {
+    min-height: 200px;
+    gap: 14px;
+    padding: 14px 10px;
+  }
+  
+  .cardContentHeader img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .cardContentHeader h5 {
+    font-size: 15px;
+  }
+  
+  .cardFlexStart {
+    gap: 8px;
+  }
+  
+  .cardFlexStart h5 {
+    font-size: 13px;
+  }
+  
+  .cardFlexRow {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
+
+@media print {
+  .cardCourse {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+  
+  .cardCourse:hover {
+    box-shadow: none;
+  }
+  
+  .emptyState {
+    display: none;
+  }
+}

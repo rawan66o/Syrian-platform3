@@ -154,13 +154,11 @@ function Profile({ status = 'volunteer' }) {
 
         {/* ROW 2: Birth Date and Phone */}
         <div className={styles.flexRow}>
-          {/* Date of Birth مع التقويم */}
           <div className={styles.flexColStart}>
             <label className={styles.label}>
               <img src='/images/icons/dashboard/calendar.svg' alt="" /> تاريخ الميلاد
             </label>
             <div className={styles.calendarContainer}>
-              {/* حقل التاريخ المخصص */}
               <input
                 type="text"
                 className={styles.customDateInput}
@@ -170,7 +168,6 @@ function Profile({ status = 'volunteer' }) {
                 readOnly
               />
               
-              {/* زر التقويم */}
               <button
                 ref={calendarButtonRef}
                 type="button"
@@ -180,7 +177,6 @@ function Profile({ status = 'volunteer' }) {
                 <img src='/images/icons/dashboard/calendar.svg' alt='فتح التقويم' />
               </button>
 
-              {/* نافذة التقويم المنبثقة */}
               {isCalendarOpen && (
                 <div ref={calendarRef} className={styles.calendarPopup}>
                   <DatePicker
@@ -228,7 +224,6 @@ function Profile({ status = 'volunteer' }) {
             </div>
           </div>
 
-          {/* Phone Number (كما هو) */}
           <div className={styles.flexColStart}>
             <label className={styles.label}>
               <img src="/images/icons/dashboard/call.svg" alt="" /> رقم الهاتف

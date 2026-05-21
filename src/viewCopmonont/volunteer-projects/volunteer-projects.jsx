@@ -12,7 +12,6 @@ function VolunteerProjects() {
   const [activeStep, setActiveStep] = useState(0);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
   
-  // تتبع حجم النافذة
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
@@ -24,7 +23,6 @@ function VolunteerProjects() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   
-  // تحديد حجم الشاشة
   const getScreenSize = () => {
     if (windowWidth < 768) return 'mobile';
     if (windowWidth >= 768 && windowWidth < 1024) return 'tablet';
@@ -33,34 +31,29 @@ function VolunteerProjects() {
   
   const screenSize = getScreenSize();
   
-  // تحديد عدد العناصر لكل صفحة حسب حجم الشاشة
   const getItemsPerPage = () => {
     if (screenSize === 'mobile') return 4;
     if (screenSize === 'tablet') return 4;
-    return 6; // desktop
+    return 6; 
   };
   
   const ITEMS_PER_PAGE = getItemsPerPage();
   
-  // حساب عدد الأعمدة
   const getColumnCount = () => {
     if (screenSize === 'mobile') return 1;
     if (screenSize === 'tablet') return 2;
-    return 2; // desktop
+    return 2;
   };
   
   const COLUMN_COUNT = getColumnCount();
   
-  // حساب عدد الصفحات ديناميكياً
   const totalPages = Math.max(1, Math.ceil(projects.length / ITEMS_PER_PAGE));
   
-  // إنشاء مصفوفة الصفحات
   const steps = useMemo(
     () => Array.from({ length: totalPages }, (_, i) => i + 1),
     [totalPages]
   );
 
-  // حساب المشاريع للصفحة الحالية
   const currentProjects = useMemo(() => {
     const startIndex = activeStep * ITEMS_PER_PAGE;
     const endIndex = startIndex + ITEMS_PER_PAGE;
@@ -85,7 +78,6 @@ function VolunteerProjects() {
     }
   };
 
-  // دالة لعرض الأرقام مع النقاط للصفحات البعيدة
   const renderStepNumbers = () => {
     const maxVisibleSteps = screenSize === 'mobile' ? 5 : 7;
     
@@ -153,7 +145,6 @@ function VolunteerProjects() {
     return result;
   };
 
-  // تحديد class للكونتينر حسب حجم الشاشة
   const getContainerClass = () => {
     return `${styles.container} ${styles[screenSize]}`;
   };
@@ -163,19 +154,16 @@ function VolunteerProjects() {
       <Header title={'مشاريع تطوعية'} />
       <div className={getContainerClass()}>
         <div className={styles.contentWrapper}>
-          {/* الشريط الجانبي */}
           <div className={styles.sidebar}>
             <CategoriesProject />
             <LatestProjects />
           </div>
 
-          {/* المحتوى الرئيسي */}
           <div className={styles.mainContent}>
-            {/* عرض المشاريع */}
             {currentProjects.length > 0 ? (
               <div 
                 className={styles.projectsGrid}
-                style={{ gridTemplateColumns: `repeat(${COLUMN_COUNT}, 1fr)` }}
+                // style={{ gridTemplateColumns: `repeat(${COLUMN_COUNT}, 1fr)` }}
               >
                 {currentProjects.map((project) => (
                   <div key={project.id} className={styles.projectItem}>
@@ -189,10 +177,8 @@ function VolunteerProjects() {
               </div>
             )}
 
-            {/* Pagination - تعرض فقط إذا كان هناك أكثر من صفحة */}
             {totalPages > 1 && (
               <div className={styles.pagination}>
-                {/* زر السابق */}
                 <button
                   className={`${styles.paginationBtn} ${styles.prevBtn} ${activeStep === 0 ? styles.disabled : ''}`}
                   onClick={handleBack}
@@ -201,12 +187,10 @@ function VolunteerProjects() {
                   <span className={styles.arrowIcon}>←</span>
                 </button>
 
-                {/* أرقام الصفحات */}
                 <div className={styles.stepNumbersContainer}>
                   {renderStepNumbers()}
                 </div>
 
-                {/* زر التالي */}
                 <button
                   className={`${styles.paginationBtn} ${styles.nextBtn} ${activeStep === totalPages - 1 ? styles.disabled : ''}`}
                   onClick={handleNext}

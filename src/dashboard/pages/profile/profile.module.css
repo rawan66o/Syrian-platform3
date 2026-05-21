@@ -1,6 +1,3 @@
-/* profile.module.css */
-
-/* Container Styles */
 .container {
   direction: rtl;
   display: flex;
@@ -10,7 +7,6 @@
   width: 100%;
 }
 
-/* Layout Styles */
 .layoutForm {
   display: flex;
   flex-direction: column;
@@ -36,7 +32,6 @@
   width: 100%;
 }
 
-/* Label Styles */
 .label {
   font-weight: 500;
   font-size: 16px;
@@ -52,7 +47,6 @@
   height: 20px;
 }
 
-/* Input Styles */
 .input,
 .select,
 .textarea {
@@ -101,12 +95,11 @@
   outline: none;
 }
 
-/* Phone Input Styles */
 .phoneContainer {
   display: flex;
   align-items: center;
   width: 100%;
-  /* position: relative; */
+  position: relative;
 }
 
 .phoneInput {
@@ -114,10 +107,11 @@
   height: 48px;
   border: 1px solid #70838766;
   border-left: none;
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 0 8px 8px 0;
   padding: 0 16px;
   font-size: 16px;
   outline: none;
+  text-align: right;
 }
 
 .phoneButton {
@@ -156,6 +150,7 @@
   width: 20px;
   height: 15px;
   border-radius: 3px;
+  object-fit: cover;
 }
 
 .chevronIcon {
@@ -164,17 +159,68 @@
   transition: transform 0.3s;
 }
 
-/* Date Input Styles */
-
-/* Calendar Popup Styles */
 .calendarContainer {
-  /* position: relative; */
+  position: relative;
   width: 100%;
 }
 
+/* Custom Date Input */
+.customDateInput {
+  width: 100%;
+  height: 48px;
+  padding: 0 40px 0 20px;
+  border: 1px solid #D9E4E5;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #072127;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  text-align: right;
+}
+
+.customDateInput:focus {
+  border-color: #6DCDE5;
+  box-shadow: 0 0 0 3px rgba(109, 205, 229, 0.1);
+}
+
+.customDateInput::placeholder {
+  color: #708387;
+  font-weight: 500;
+}
+
+/* Calendar Button - FIXED */
+.calendarButton {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendarButton:hover img {
+  opacity: 1;
+}
+
+.calendarButton img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+/* Calendar Popup Styles - FIXED */
 .calendarPopup {
   position: absolute;
-  top: 60px;
+  top: calc(100% + 8px);
   right: 0;
   z-index: 1000;
   background: white;
@@ -182,14 +228,21 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border: 1px solid #D9E4E5;
   overflow: hidden;
+  min-width: 300px;
 }
 
-/* react-datepicker */
+/* react-datepicker - FIXED for RTL */
 :global(.react-datepicker) {
   font-family: inherit !important;
   border: none !important;
   border-radius: 12px !important;
   background: white !important;
+  width: 100% !important;
+  direction: rtl !important;
+}
+
+:global(.react-datepicker__month-container) {
+  width: 100% !important;
 }
 
 :global(.react-datepicker__header) {
@@ -197,6 +250,7 @@
   border-bottom: none !important;
   border-radius: 12px 12px 0 0 !important;
   padding: 16px !important;
+  position: relative !important;
 }
 
 :global(.react-datepicker__current-month) {
@@ -246,11 +300,24 @@
 }
 
 :global(.react-datepicker__navigation) {
-  top: 20px !important;
+  top: 16px !important;
+}
+
+:global(.react-datepicker__navigation--previous) {
+  right: 16px !important;
+  left: auto !important;
+}
+
+:global(.react-datepicker__navigation--next) {
+  left: 16px !important;
+  right: auto !important;
 }
 
 :global(.react-datepicker__navigation-icon::before) {
   border-color: white !important;
+  border-width: 2px 2px 0 0 !important;
+  height: 8px !important;
+  width: 8px !important;
 }
 
 :global(.react-datepicker__triangle) {
@@ -273,82 +340,53 @@
   margin-top: 8px !important;
 }
 
-/* Calendar Button */
-.calendarButton {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
+/* Year and Month Dropdowns */
+:global(.react-datepicker__year-dropdown),
+:global(.react-datepicker__month-dropdown) {
+  background-color: white !important;
+  border: 1px solid #D9E4E5 !important;
+  border-radius: 8px !important;
+  padding: 8px !important;
 }
 
-.calendarButton:hover img {
-  opacity: 1;
+:global(.react-datepicker__year-option),
+:global(.react-datepicker__month-option) {
+  padding: 8px !important;
+  text-align: center !important;
 }
 
-.calendarButton img {
-  width: 20px;
-  height: 20px;
-  opacity: 0.7;
-  transition: opacity 0.2s;
+:global(.react-datepicker__year-option:hover),
+:global(.react-datepicker__month-option:hover) {
+  background-color: #6DCDE533 !important;
 }
 
-/* Custom Date Input */
-.customDateInput {
-  width: 100%;
-  height: 50px;
-  padding: 0 20px;
-  border: 1px solid #D9E4E5;
-  border-radius: 8px;
-  font-size: 16px;
-  color: #072127;
-  background: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
-}
-
-.customDateInput:focus {
-  border-color: #6DCDE5;
-  box-shadow: 0 0 0 3px rgba(109, 205, 229, 0.1);
-}
-
-.customDateInput::placeholder {
-  color: #708387;
-  font-weight: 500;
-}
-
-/* Arabic Calendar customization */
-:global(.react-datepicker__day-name):first-letter {
-  font-weight: 600;
-}
-
-/* Dropdown Styles */
 .dropdown {
   position: absolute;
   top: 55px;
   left: 0;
-  width: 250px;
+  right: 0;
+  width: 100%;
   max-height: 300px;
   overflow-y: auto;
-  background-color: #D9E4E5;
+  background-color: white;
   border: 1px solid #D9E4E5;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
-.dropdownFull {
-  composes: dropdown;
-  width: 100%;
+.residenceDropdown {
+  position: absolute;
+  left: 0;
+  right: 64%;
+  width: 33%;
+  max-height: 300px;
+  overflow-y: auto;
   background-color: white;
+  border: 1px solid #D9E4E5;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .dropdownItem {
@@ -362,6 +400,7 @@
   cursor: pointer;
   text-align: right;
   transition: background-color 0.2s;
+  background-color: white;
 }
 
 .dropdownItem:hover {
@@ -396,6 +435,7 @@
 
 .countryName {
   font-weight: 500;
+  color: #000;
 }
 
 .countryPrefix {
@@ -409,9 +449,9 @@
   border-bottom: 1px solid #f0f0f0;
   box-sizing: border-box;
   outline: none;
+  text-align: right;
 }
 
-/* File Input Styles */
 .inputFile {
   display: flex;
   align-items: center;
@@ -469,7 +509,6 @@
   font-weight: 400;
 }
 
-/* Certificate Links */
 .certificateLink {
   color: #6DCDE5;
   text-decoration: none;
@@ -484,7 +523,6 @@
   color: #6DCDE5;
 }
 
-/* Delete Button */
 .deleteButton {
   width: 195px;
   height: 52px;
@@ -502,13 +540,12 @@
   background: #EC262533;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .flexRow {
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .layoutForm {
     gap: 20px;
   }
@@ -518,5 +555,61 @@
     right: 0;
     width: 100%;
     min-width: 100%;
+  }
+
+  .calendarPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 320px;
+    z-index: 1001;
+  }
+
+  .customDateInput {
+    padding: 0 40px 0 16px;
+  }
+
+  .calendarButton {
+    left: 12px;
+  }
+
+  .phoneContainer {
+    flex-direction: row;
+  }
+
+  .phoneButton {
+    min-width: 80px;
+  }
+
+  .phoneButtonContent {
+    gap: 4px;
+  }
+
+  .prefixText {
+    font-size: 12px;
+  }
+
+  .residenceDropdown {
+    right: 15px;
+    width: 95%;
+  }
+
+  .flagIcon {
+    width: 18px;
+    height: 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .calendarPopup {
+    right: auto;
+    left: 0;
+  }
+
+  .residenceDropdown {
+    right: 51%;
+    width: 46%;
   }
 }

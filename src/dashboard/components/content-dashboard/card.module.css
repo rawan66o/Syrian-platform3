@@ -1,0 +1,241 @@
+.cardFlexColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cardFlexRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cardContentHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cardImage {
+  width: 85px;
+  height: 85px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.courseTitle {
+  margin: 0;
+  color: #072127;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.pointersIcon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.pointersIcon:hover {
+  transform: scale(1.1);
+}
+
+.progressLabel {
+  color: #072127;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+.progressBarContainer {
+  width: 100%;
+  height: 19px;
+  background-color: #ecf0f1;
+  border-radius: 6px;
+  margin: 10px 0 20px 0;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5px;
+  transition: width 0.5s ease;
+  font-size: 11px;
+  color: white;
+  font-weight: 500;
+}
+
+.courseInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.infoIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.infoText {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.continueCourse {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 0 20px;
+  width: 203.5px;
+  height: 52px;
+  border-radius: 8px;
+  border-bottom: 1px solid #6DCDE5;
+  background: #6DCEE51A;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.continueCourse:hover {
+  background: #6DCEE533;
+  transform: translateY(-2px);
+}
+
+.continueCourse h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #072127;
+  font-weight: 500;
+}
+
+.continueCourse img {
+  width: 6px;
+  height: 12px;
+}
+
+.completedCourseContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.endCourse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 203.5px;
+  height: 52px;
+  border-radius: 8px;
+  border-bottom: 1px solid #072127;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.endCourse:hover {
+  background: #6DCEE510;
+  transform: translateY(-2px);
+}
+
+.endCourse h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #072127;
+  font-weight: 500;
+}
+
+.endCourse img {
+  width: 7px;
+  height: 12px;
+}
+
+.endBadge {
+  padding: 8px 16px;
+  background: #34C75914;
+  border-radius: 4px;
+  color: #34C759;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .cardFlexColumn {
+    gap: 16px;
+  }
+  
+  .cardImage {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .courseTitle {
+    font-size: 16px;
+  }
+  
+  .cardContentHeader {
+    gap: 10px;
+  }
+  
+  .progressLabel {
+    font-size: 12px;
+  }
+  
+  .infoText {
+    font-size: 12px;
+  }
+  
+  .continueCourse {
+    height: 48px;
+  }
+  
+  .continueCourse h2 {
+    font-size: 14px;
+  }
+  
+  .endCourse {
+    height: 48px;
+  }
+  
+  .endCourse h2 {
+    font-size: 14px;
+  }
+  
+  .endBadge {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .completedCourseContainer {
+    gap: 10px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cardFlexColumn {
+  animation: slideIn 0.3s ease;
+}

@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './Navbar.css'
+import { useNavigate } from 'react-router';
 
 const Navbar = ({ isMobile, onToggleSidebar, isSidebarOpen }) => {
   const [unreadCount, setUnreadCount] = useState(3);
+  const navgate = useNavigate()
   const [anchorEl, setAnchorEl] = useState(null)
   // eslint-disable-next-line
 
@@ -14,16 +16,38 @@ const Navbar = ({ isMobile, onToggleSidebar, isSidebarOpen }) => {
     setAnchorEl(null)
   }
 
-  const menuItems = ['الصفحة الرئيسية', 'الكورسات', 'المنتدى', 'المشاريع', 'اتصل بنا']
+  const menuItems = [
+    {
+      name: 'الصفحة الرئيسية',
+      path: '/'
+    }, 
+    {
+      name: 'الكورسات',
+      path:'/courses'
+    }, 
+    {
+      name: 'المنتدى',
+      path:'/forum'
+    }, 
+    {
+      name: 'المشاريع',
+      path:'/volunteer-projects'
+    }, 
+    {
+      name: 'اتصل بنا',
+      path: ''
+    }
+  ]
 
   return (
     <div className="navbar">
       <div className='nav-right'>
         <img className='icon-logo' alt='' src="/images/logo/spLogo12.png" />
         <div className='divid' />
-        {menuItems.map((item) => (
+        {menuItems.map((item,index) => (
           <h6 className='items'
-            key={item}
+            key={index}
+            onClick={() => navgate(item.path)}
             style={{
               cursor: 'pointer',
               color:'#70798B',
@@ -33,7 +57,7 @@ const Navbar = ({ isMobile, onToggleSidebar, isSidebarOpen }) => {
               },
             }}
           >
-            {item}
+            {item.name}
           </h6>
         ))}
 

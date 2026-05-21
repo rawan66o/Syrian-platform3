@@ -1,10 +1,11 @@
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router';
 import './sidebar-dashboard.css'
 import { useState, useEffect } from 'react';
 
 function SidebarMobile({ isOpen, onClose }) {
     const [activeItem, setActiveItem] = useState('لوحة التحكم');
     const navigate = useNavigate();
+    const location = useLocation();
 
     const list = [
         {
@@ -39,7 +40,17 @@ function SidebarMobile({ isOpen, onClose }) {
         }
     ];
 
-    // منع التمرير عندما يكون السايدبار مفتوحاً
+    useEffect(() => {
+        const currentPath = location.pathname;
+        const activeItemFromPath = list.find(item => item.path === currentPath);
+        
+        if (activeItemFromPath) {
+            setActiveItem(activeItemFromPath.name);
+        } else if (currentPath === '/dashboard/settings') {
+            setActiveItem('الاعدادات');
+        };
+    }, [location.pathname])
+
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
@@ -58,25 +69,16 @@ function SidebarMobile({ isOpen, onClose }) {
             navigate(path);
         }
         
-        onClose(); // إغلاق بعد النقر دائماً
+        onClose();
     };
 
     if (!isOpen) return null;
 
     return (
         <div className="sidebar-mobile">
-            {/* Overlay */}
             <div className="sidebar-mobile-overlay" onClick={onClose} />
             
-            {/* السايدبار */}
             <div className="sidebar-mobile-content">
-                {/* رأس السايدبار */}
-                <div className="sidebar-mobile-header">
-                    {/* <button className="close-btn" onClick={onClose}>✕</button> */}
-                    {/* <img className="sidebar-logo" src="/images/logo/spLogo12.png" alt="logo" /> */}
-                </div>
-
-                {/* محتوى القائمة */}
                 <div className="sidebar-content">
                     {list.map((item, ind) => (
                         <div 
@@ -93,7 +95,6 @@ function SidebarMobile({ isOpen, onClose }) {
                     ))}
                 </div>
 
-                {/* قسم أخرى (إعدادات، تسجيل خروج) */}
                 <div className='sidebar-footer'>
                     <div className='footer-title'>
                         <h6>أخرى</h6>
@@ -114,7 +115,6 @@ function SidebarMobile({ isOpen, onClose }) {
                         <div 
                             className={`content-sidebar-flex ${activeItem === "تسجيل الخروج" ? 'active' : ''}`} 
                             onClick={() => {
-                                // منطق تسجيل الخروج
                                 console.log("تسجيل الخروج");
                                 onClose();
                             }}

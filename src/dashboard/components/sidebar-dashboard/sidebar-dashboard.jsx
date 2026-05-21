@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './sidebar-dashboard.css'
+import { useLocation } from 'react-router';
 
 function SidebarDashboard({ isOpen, onClose }) {
-    const [activeItem, setActiveItem] = useState('لوحة التحكم');
+    const [activeItem, setActiveItem] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
 
-    // تحديد المسارات لكل عنصر
     const list = [
         {
             name:'لوحة التحكم',
             logo:'/images/icons/dashboard/category/category2.png',
             logo2:'/images/icons/dashboard/category/category.png',
-            path: '/dashboard' // المسار الرئيسي للداشبورد
+            path: '/dashboard'
         },
         {
             name:'الملف الشخصي',
@@ -40,10 +41,21 @@ function SidebarDashboard({ isOpen, onClose }) {
         }
     ]
 
+    useEffect(() => {
+        const currentPath = location.pathname;
+        const activeItemFromPath = list.find(item => item.path === currentPath);
+        
+        if (activeItemFromPath) {
+            setActiveItem(activeItemFromPath.name);
+        } else if (currentPath === '/dashboard/settings') {
+            setActiveItem('الاعدادات');
+        };
+    }, [location.pathname])
+
+
     const handleItemClick = (itemName, path) => {
         setActiveItem(itemName);
         
-        // التنقل إلى المسار المحدد
         if (path) {
             navigate(path);
         }
@@ -66,14 +78,12 @@ function SidebarDashboard({ isOpen, onClose }) {
 
     const handleSettingsClick = () => {
         setActiveItem("الاعدادات");
-        // هنا يمكنك التنقل إلى صفحة الإعدادات إذا كان لديك مسار لها
         // navigate('/dashboard/settings');
         console.log("تم النقر على الإعدادات");
     }
 
     const handleLogoutClick = () => {
         setActiveItem("تسجيل الخروج");
-        // هنا يمكنك إضافة منطق تسجيل الخروج
         // navigate('/login');
         console.log("تم النقر على تسجيل الخروج");
     }
@@ -83,9 +93,7 @@ function SidebarDashboard({ isOpen, onClose }) {
     }
 
    return (
-        <div>
-            
-            {/* حاوية السايدبار الرئيسية */}
+        <>
             <div className='sidebar-container'>
                 <h6>معلوماتي</h6>
                 
@@ -137,7 +145,7 @@ function SidebarDashboard({ isOpen, onClose }) {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
